@@ -13,8 +13,6 @@ PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 10 7 * * *  . /scripts/docker/auto_help.sh export > /scripts/logs/auto_help_export.log && spnode  /scripts/jd_bean_home.js |ts >> /scripts/logs/jd_bean_home.log 2>&1
 # 京东多合一签到
 0 0 * * *  . /scripts/docker/auto_help.sh export > /scripts/logs/auto_help_export.log && spnode  /scripts/jd_bean_sign.js |ts >> /scripts/logs/jd_bean_sign.log 2>&1
-# 美丽研究院
-0 0 * * *  . /scripts/docker/auto_help.sh export > /scripts/logs/auto_help_export.log && spnode  /scripts/jd_beauty.js |ts >> /scripts/logs/jd_beauty.log 2>&1
 # 省钱大赢家之翻翻乐
 20 * * * *  . /scripts/docker/auto_help.sh export > /scripts/logs/auto_help_export.log && spnode  /scripts/jd_big_winner.js |ts >> /scripts/logs/jd_big_winner.log 2>&1
 # 口袋书店
@@ -132,10 +130,6 @@ PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 23 1,12,22 * * *  . /scripts/docker/auto_help.sh export > /scripts/logs/auto_help_export.log && spnode  /scripts/ling_jd_bean_home.js |ts >> /scripts/logs/ling_jd_bean_home.log 2>&1
 # 京东多合一签到
 0 0 * * *  . /scripts/docker/auto_help.sh export > /scripts/logs/auto_help_export.log && spnode  /scripts/ling_jd_bean_sign.js |ts >> /scripts/logs/ling_jd_bean_sign.log 2>&1
-# 美丽研究院
-0 0 * * *  . /scripts/docker/auto_help.sh export > /scripts/logs/auto_help_export.log && spnode  /scripts/ling_jd_beauty.js |ts >> /scripts/logs/ling_jd_beauty.log 2>&1
-# 省钱大赢家之翻翻乐
-20 * * * *  . /scripts/docker/auto_help.sh export > /scripts/logs/auto_help_export.log && spnode  /scripts/ling_jd_big_winner.js |ts >> /scripts/logs/ling_jd_big_winner.log 2>&1
 # 东东超市兑换奖品
 59 23 * * *  . /scripts/docker/auto_help.sh export > /scripts/logs/auto_help_export.log && spnode  /scripts/ling_jd_blueCoin.js |ts >> /scripts/logs/ling_jd_blueCoin.log 2>&1
 # 口袋书店
@@ -156,8 +150,6 @@ PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 15 0 * * *  . /scripts/docker/auto_help.sh export > /scripts/logs/auto_help_export.log && spnode  /scripts/ling_jd_ccSign.js |ts >> /scripts/logs/ling_jd_ccSign.log 2>&1
 # 京喜财富岛
 0 0 * * *  . /scripts/docker/auto_help.sh export > /scripts/logs/auto_help_export.log && spnode  /scripts/ling_jd_cfd.js |ts >> /scripts/logs/ling_jd_cfd.log 2>&1
-# 京喜财富岛热气球挂机
-0 0 * * *  . /scripts/docker/auto_help.sh export > /scripts/logs/auto_help_export.log && spnode  /scripts/ling_jd_cfd_loop.js |ts >> /scripts/logs/ling_jd_cfd_loop.log 2>&1
 # 摇京豆
 5 0,23 * * *  . /scripts/docker/auto_help.sh export > /scripts/logs/auto_help_export.log && spnode  /scripts/ling_jd_club_lottery.js |ts >> /scripts/logs/ling_jd_club_lottery.log 2>&1
 # 内容鉴赏官
@@ -166,7 +158,7 @@ PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 10 * * * *  . /scripts/docker/auto_help.sh export > /scripts/logs/auto_help_export.log && spnode  /scripts/ling_jd_daily_egg.js |ts >> /scripts/logs/ling_jd_daily_egg.log 2>&1
 # 小鸽有礼-每日抽奖
 # 东东玩家
-0 0 * * *  . /scripts/docker/auto_help.sh export > /scripts/logs/auto_help_export.log && spnode  /scripts/ling_jd_ddwj.js |ts >> /scripts/logs/ling_jd_ddwj.log 2>&1
+0 9 * * *  . /scripts/docker/auto_help.sh export > /scripts/logs/auto_help_export.log && spnode  /scripts/ling_jd_ddwj.js |ts >> /scripts/logs/ling_jd_ddwj.log 2>&1
 # 热血心跳,狂解压
 0 0 * * *  . /scripts/docker/auto_help.sh export > /scripts/logs/auto_help_export.log && spnode  /scripts/ling_jd_decompression.js |ts >> /scripts/logs/ling_jd_decompression.log 2>&1
 # 金榜创造营
@@ -282,12 +274,8 @@ PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 10 0,7,23 * * *  . /scripts/docker/auto_help.sh export > /scripts/logs/auto_help_export.log && spnode  /scripts/ling_jd_syj.js |ts >> /scripts/logs/ling_jd_syj.log 2>&1
 # 天天赚京豆
 20 8 * * *  . /scripts/docker/auto_help.sh export > /scripts/logs/auto_help_export.log && spnode  /scripts/ling_jd_ttzjd.js |ts >> /scripts/logs/ling_jd_ttzjd.log 2>&1
-# 特物Z简爱
-0 0 * * *  . /scripts/docker/auto_help.sh export > /scripts/logs/auto_help_export.log && spnode  /scripts/ling_jd_twlove.js |ts >> /scripts/logs/ling_jd_twlove.log 2>&1
 # 特务Z行动-星小店
 0 0 * * *  . /scripts/docker/auto_help.sh export > /scripts/logs/auto_help_export.log && spnode  /scripts/ling_jd_twz_star.js |ts >> /scripts/logs/ling_jd_twz_star.log 2>&1
-# 推一推
-0 0 * * *  . /scripts/docker/auto_help.sh export > /scripts/logs/auto_help_export.log && spnode  /scripts/ling_jd_tyt.js |ts >> /scripts/logs/ling_jd_tyt.log 2>&1
 # 京东众筹许愿池
 0 0 * * *  . /scripts/docker/auto_help.sh export > /scripts/logs/auto_help_export.log && spnode  /scripts/ling_jd_wish.js |ts >> /scripts/logs/ling_jd_wish.log 2>&1
 # 东东世界
@@ -316,10 +304,6 @@ PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 0 9 * * *  . /scripts/docker/auto_help.sh export > /scripts/logs/auto_help_export.log && spnode  /scripts/star_jd_xinxiangyin.js |ts >> /scripts/logs/star_jd_xinxiangyin.log 2>&1
 # 领京豆额外奖励
 10 7 * * *  . /scripts/docker/auto_help.sh export > /scripts/logs/auto_help_export.log && spnode  /scripts/zero_jd_bean_home.js |ts >> /scripts/logs/zero_jd_bean_home.log 2>&1
-# 美丽研究院
-0 0 * * *  . /scripts/docker/auto_help.sh export > /scripts/logs/auto_help_export.log && spnode  /scripts/zero_jd_beauty.js |ts >> /scripts/logs/zero_jd_beauty.log 2>&1
-# 省钱大赢家之翻翻乐
-20 0,6-23 * * *  . /scripts/docker/auto_help.sh export > /scripts/logs/auto_help_export.log && spnode  /scripts/zero_jd_big_winner.js |ts >> /scripts/logs/zero_jd_big_winner.log 2>&1
 # 东东超市兑换奖品
 59 23 * * *  . /scripts/docker/auto_help.sh export > /scripts/logs/auto_help_export.log && spnode  /scripts/zero_jd_blueCoin.js |ts >> /scripts/logs/zero_jd_blueCoin.log 2>&1
 # 口袋书店
@@ -336,10 +320,6 @@ PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 15 0 * * *  . /scripts/docker/auto_help.sh export > /scripts/logs/auto_help_export.log && spnode  /scripts/zero_jd_ccSign.js |ts >> /scripts/logs/zero_jd_ccSign.log 2>&1
 # 京喜财富岛
 5 0,6-23 * * *  . /scripts/docker/auto_help.sh export > /scripts/logs/auto_help_export.log && spnode  /scripts/zero_jd_cfd.js |ts >> /scripts/logs/zero_jd_cfd.log 2>&1
-# 京喜财富岛热气球挂机
-0 0 * * *  . /scripts/docker/auto_help.sh export > /scripts/logs/auto_help_export.log && spnode  /scripts/zero_jd_cfd_loop.js |ts >> /scripts/logs/zero_jd_cfd_loop.log 2>&1
-# 京喜财富岛合成月饼
-10 6,13,23 * * *  . /scripts/docker/auto_help.sh export > /scripts/logs/auto_help_export.log && spnode  /scripts/zero_jd_cfd_mooncake.js |ts >> /scripts/logs/zero_jd_cfd_mooncake.log 2>&1
 # 摇京豆
 5 0,23 * * *  . /scripts/docker/auto_help.sh export > /scripts/logs/auto_help_export.log && spnode  /scripts/zero_jd_club_lottery.js |ts >> /scripts/logs/zero_jd_club_lottery.log 2>&1
 # 内容鉴赏官
@@ -438,8 +418,6 @@ PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 11 0,6-23 * * *  . /scripts/docker/auto_help.sh export > /scripts/logs/auto_help_export.log && spnode  /scripts/zero_jd_superMarket.js |ts >> /scripts/logs/zero_jd_superMarket.log 2>&1
 # 赚京豆
 10 0,7,23 * * *  . /scripts/docker/auto_help.sh export > /scripts/logs/auto_help_export.log && spnode  /scripts/zero_jd_syj.js |ts >> /scripts/logs/zero_jd_syj.log 2>&1
-# 柠檬推一推
-0 6-23/4 * * *  . /scripts/docker/auto_help.sh export > /scripts/logs/auto_help_export.log && spnode  /scripts/zero_jd_tyt.js |ts >> /scripts/logs/zero_jd_tyt.log 2>&1
 # 众筹许愿池
 40 0,2 * * *  . /scripts/docker/auto_help.sh export > /scripts/logs/auto_help_export.log && spnode  /scripts/zero_jd_wish.js |ts >> /scripts/logs/zero_jd_wish.log 2>&1
 # 柠檬我是大老板农场
