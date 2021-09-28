@@ -1,6 +1,6 @@
 #!/bin/sh
 set -e
-
+source /repo/.bashrc
 # 放在这个初始化python3环境，目的减小镜像体积，一些不需要使用bot交互的用户可以不用拉体积比较大的镜像
 # 在这个任务里面还有初始化还有目的就是为了方便bot更新了新功能的话只需要重启容器就完成更新
 function initPythonEnv() {
@@ -167,28 +167,28 @@ else
   echo "未配置随机延迟对应的环境变量，故不设置延迟任务..."
 fi
 
-echo "第4步判断是否配置自定义shell执行脚本..."
-if [ 0"$CUSTOM_SHELL_FILE" = "0" ]; then
-  echo "未配置自定shell脚本文件，跳过执行。"
-else
-  if expr "$CUSTOM_SHELL_FILE" : 'http.*' &>/dev/null; then
-    echo "自定义shell脚本为远程脚本，开始下载自定义远程脚本。"
-    wget -O /scripts/docker/shell_script_mod.sh $CUSTOM_SHELL_FILE
-    echo "下载完成，开始执行..."
-    echo "#远程自定义shell脚本追加定时任务" >>$mergedListFile
-    sh -x /scripts/docker/shell_script_mod.sh
-    echo "自定义远程shell脚本下载并执行结束。"
-  else
-    if [ ! -f $CUSTOM_SHELL_FILE ]; then
-      echo "自定义shell脚本为docker挂载脚本文件，但是指定挂载文件不存在，跳过执行。"
-    else
-      echo "docker挂载的自定shell脚本，开始执行..."
-      echo "#docker挂载自定义shell脚本追加定时任务" >>$mergedListFile
-      sh -x $CUSTOM_SHELL_FILE
-      echo "docker挂载的自定shell脚本，执行结束。"
-    fi
-  fi
-fi
+#echo "第4步判断是否配置自定义shell执行脚本..."
+#if [ 0"$CUSTOM_SHELL_FILE" = "0" ]; then
+#  echo "未配置自定shell脚本文件，跳过执行。"
+#else
+#  if expr "$CUSTOM_SHELL_FILE" : 'http.*' &>/dev/null; then
+#    echo "自定义shell脚本为远程脚本，开始下载自定义远程脚本。"
+#    wget -O /scripts/docker/shell_script_mod.sh $CUSTOM_SHELL_FILE
+#    echo "下载完成，开始执行..."
+#    echo "#远程自定义shell脚本追加定时任务" >>$mergedListFile
+#    sh -x /scripts/docker/shell_script_mod.sh
+#    echo "自定义远程shell脚本下载并执行结束。"
+#  else
+#    if [ ! -f $CUSTOM_SHELL_FILE ]; then
+#      echo "自定义shell脚本为docker挂载脚本文件，但是指定挂载文件不存在，跳过执行。"
+#    else
+#      echo "docker挂载的自定shell脚本，开始执行..."
+#      echo "#docker挂载自定义shell脚本追加定时任务" >>$mergedListFile
+#      sh -x $CUSTOM_SHELL_FILE
+#      echo "docker挂载的自定shell脚本，执行结束。"
+#    fi
+#  fi
+#fi
 
 echo "第5步删除不运行的脚本任务..."
 if [ $DO_NOT_RUN_SCRIPTS ]; then
@@ -229,7 +229,7 @@ if [ -n "$ENABLE_AUTO_HELP" ]; then
 fi
 
 echo "第8步增加 |ts 任务日志输出时间戳..."
-sed -i "/\( ts\| |ts\|| ts\)/!s/>>/\|ts >>/g" $mergedListFile
+sed -i "/\( ts\| |ts\|| ts\)/! s/>>/\|ts >>/g" $mergedListFile
 
 echo "第9步执行proc_file.sh脚本任务..."
 sh /scripts/docker/proc_file.sh
