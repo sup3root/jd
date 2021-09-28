@@ -161,8 +161,6 @@ PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 0 0 * * * node /scripts/ling_jd_cfd.js >> /scripts/logs/ling_jd_cfd.log 2>&1
 # 京喜财富岛热气球挂机
 0 0 * * * node /scripts/ling_jd_cfd_loop.js >> /scripts/logs/ling_jd_cfd_loop.log 2>&1
-# 清空购物车
-55 17 * * * node /scripts/ling_jd_cleancart.js >> /scripts/logs/ling_jd_cleancart.log 2>&1
 # 摇京豆
 5 0,23 * * * node /scripts/ling_jd_club_lottery.js >> /scripts/logs/ling_jd_club_lottery.log 2>&1
 # 内容鉴赏官
