@@ -9,7 +9,7 @@
 # 签到图形验证版
 3 0 * * * node /scripts/jd_sign_graphics.js >> /scripts/logs/jd_sign_graphics.log 2>&1
 # 只开卡不关注
-58 7,14 * * * . /repo/.bashrc && bash /repo/curtinlvJD-script/run.sh -r /repo/curtinlvJD-script/OpenCard/jd_OpenCard.py >/dev/null 2>&1
+50 7,14 * * * . /repo/.bashrc && bash /repo/curtinlvJD-script/run.sh -r /repo/curtinlvJD-script/OpenCard/jd_OpenCard.py >/dev/null 2>&1
 # 财富大陆（京喜财富岛）
 13 */2 * * * node /scripts/gua_wealth_island.js >> /scripts/logs/gua_wealth_island.log 2>&1
 # 财富大陆互助
@@ -18,8 +18,6 @@
 11 9 * * * node /scripts/gua_MMdou.js >> /scripts/logs/gua_MMdou.log 2>&1
 # 京东超市兑换
 59 23 * * * . /repo/.bashrc && python /repo/curtinlvJD-script/jd_blueCoin.py >>/scripts/logs/jd_blueCoin.log 2>&1
-# 东东玩家9.17-10.11
-3 10,20 1-11,22-30 9,10 * node /scripts/gua_ddgame.js >>/scripts/logs/gua_ddgame.log 2>&1
 # 京喜工厂助力
 40 */6 * * * node /scripts/jd_dreamFactory_help.js >> /scripts/logs/jd_dreamFactory_help.log 2>&1
 # 手机狂欢城 9.16-10.1

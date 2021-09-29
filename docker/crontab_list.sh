@@ -157,8 +157,6 @@ PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 5 0,23 * * * node /scripts/ling_jd_club_lottery.js >> /scripts/logs/ling_jd_club_lottery.log 2>&1
 # 内容鉴赏官
 15 3,6 * * * node /scripts/ling_jd_connoisseur.js >> /scripts/logs/ling_jd_connoisseur.log 2>&1
-# 天天提鹅
-10 * * * * node /scripts/ling_jd_daily_egg.js >> /scripts/logs/ling_jd_daily_egg.log 2>&1
 # 小鸽有礼-每日抽奖
 13 1,22,23 * * * node /scripts/ling_jd_daily_lottery.js >> /scripts/logs/ling_jd_daily_lottery.log 2>&1
 # 东东玩家
