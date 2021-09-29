@@ -576,6 +576,8 @@ PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 10 0,7,23 * * * node /scripts/zero_jd_syj.js >> /scripts/logs/zero_jd_syj.log 2>&1
 # 京东试用
 0 9 * * * node /scripts/zero_jd_try.js >> /scripts/logs/zero_jd_try.log 2>&1
+# 天天拼图
+20 0,16 * * * node /scripts/zero_jd_ttpt.js >> /scripts/logs/zero_jd_ttpt.log 2>&1
 # 柠檬推一推
 0 6-23/4 * * * node /scripts/zero_jd_tyt.js >> /scripts/logs/zero_jd_tyt.log 2>&1
 # 取关所有主播

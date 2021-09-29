@@ -4,7 +4,7 @@
 39 4 */2 * * git -C /repo/curtinlvJD-script/ pull >> /scripts/logs/gitpull_cur.log 2>&1
 19 */8 * * * cd /repo/classmatelin-jd_scripts && git pull >> /scripts/logs/gitpull_class.log 2>&1
 13 3 */2 * * cd /repo/sunert-script && git pull >> /scripts/logs/gitpull_sunert.log 2>&1
-19 2 * * * sh /scripts/docker/diy.sh >>/scripts/logs/diy.log 2>&1
+19 10,20 * * * sh /scripts/docker/diy.sh >>/scripts/logs/diy.log 2>&1
 
 # 签到图形验证版
 3 0 * * * node /scripts/jd_sign_graphics.js >> /scripts/logs/jd_sign_graphics.log 2>&1

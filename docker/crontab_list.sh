@@ -434,3 +434,5 @@ PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 25 0,6-23 * * * node /scripts/zero_jd_z_health_energy.js >> /scripts/logs/zero_jd_z_health_energy.log 2>&1
 # 柠檬赚金币
 0 7 * * * node /scripts/zero_jd_zjb.js >> /scripts/logs/zero_jd_zjb.log 2>&1
+# 天天拼图
+20 0,16 * * * node /scripts/zero_jd_ttpt.js >> /scripts/logs/zero_jd_ttpt.log 2>&1

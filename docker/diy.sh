@@ -44,7 +44,7 @@ done
 
 # js 文件生成 crontab_list.test 
 bash /scripts/updateCronlist.sh
-echo '已生成 /scripts/docker/crontab_list.test \n请运行diff -u /scripts/docker/crontab_list.sample /scripts/docker/crontab_list.test \n确认是否添加新任务到/scripts/docker/crontab_list.sh \n'
+echo -e '已生成 /scripts/docker/crontab_list.test \n请运行diff -u /scripts/docker/crontab_list.sample /scripts/docker/crontab_list.test \n确认是否添加新任务到/scripts/docker/crontab_list.sh \n'
 
 #find /dust -type f -name '*.js' \
 #    -not -path '*/backup/*' \
