@@ -429,7 +429,7 @@ PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 
 # update source code
 23 */4 * * * git -C /repo/jdHelloWorld/ pull >> /scripts/logs/gitpull_jdhw.log 2>&1 && cp -r /repo/jdHelloWorld/jd_*.js /scripts/
-29 */4 * * * git -C /repo/smiek2221-scripts/ pull >> /scripts/logs/gitpull_smi.log 2>&1 && cp -r /repo/smiek2221-scripts/* /scripts/
+29 */4 * * * git -C /repo/smiek2221-scripts/ pull >> /scripts/logs/gitpull_smi.log 2>&1 && cp -r /repo/smiek2221-scripts/*.js /scripts/
 39 4 */2 * * git -C /repo/curtinlvJD-script/ pull >> /scripts/logs/gitpull_cur.log 2>&1
 19 */8 * * * cd /repo/classmatelin-jd_scripts && git pull >> /scripts/logs/gitpull_class.log 2>&1
 13 3 */2 * * cd /repo/sunert-script && git pull >> /scripts/logs/gitpull_sunert.log 2>&1

@@ -1,3 +1,7 @@
 node_modules
 logs/*.log
 logs/cookies.list
+docker/custom_list_file.sh
+docker/merged_list_file.she
+docker/merged_list_file.sh
+docker/crontab_list.test
