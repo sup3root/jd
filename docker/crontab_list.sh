@@ -436,3 +436,113 @@ PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 0 7 * * * node /scripts/zero_jd_zjb.js >> /scripts/logs/zero_jd_zjb.log 2>&1
 # 天天拼图
 20 0,16 * * * node /scripts/zero_jd_ttpt.js >> /scripts/logs/zero_jd_ttpt.log 2>&1
+# 领京豆额外奖励
+23 1,12,22 * * * node /scripts/aaro_jd_bean_home.js >> /scripts/logs/aaro_jd_bean_home.log 2>&1
+# 京东多合一签到
+0 9 * * * node /scripts/aaro_jd_bean_sign.js >> /scripts/logs/aaro_jd_bean_sign.log 2>&1
+# 美丽研究院
+0 9 * * * node /scripts/aaro_jd_beauty.js >> /scripts/logs/aaro_jd_beauty.log 2>&1
+# 省钱大赢家之翻翻乐
+20 * * * * node /scripts/aaro_jd_big_winner.js >> /scripts/logs/aaro_jd_big_winner.log 2>&1
+# 京东超市兑换
+59 23 * * * node /scripts/aaro_jd_blueCoin.js >> /scripts/logs/aaro_jd_blueCoin.log 2>&1
+# 京东汽车
+10 7 * * * node /scripts/aaro_jd_car.js >> /scripts/logs/aaro_jd_car.log 2>&1
+# 京东汽车兑换
+0 0 * * * node /scripts/aaro_jd_car_exchange.js >> /scripts/logs/aaro_jd_car_exchange.log 2>&1
+# 京东手机狂欢城
+0 0-18/6 * * * node /scripts/aaro_jd_carnivalcity.js >> /scripts/logs/aaro_jd_carnivalcity.log 2>&1
+# 签到领现金
+2 0-23/4 * * * node /scripts/aaro_jd_cash.js >> /scripts/logs/aaro_jd_cash.log 2>&1
+# 领券中心签到
+15 0 * * * node /scripts/aaro_jd_ccSign.js >> /scripts/logs/aaro_jd_ccSign.log 2>&1
+# 京喜财富岛
+5 * * * * node /scripts/aaro_jd_cfd.js >> /scripts/logs/aaro_jd_cfd.log 2>&1
+# 摇京豆
+5 0,23 * * * node /scripts/aaro_jd_club_lottery.js >> /scripts/logs/aaro_jd_club_lottery.log 2>&1
+# 内容鉴赏官
+15 3,6 * * * node /scripts/aaro_jd_connoisseur.js >> /scripts/logs/aaro_jd_connoisseur.log 2>&1
+# 天天提鹅
+10 * * * * node /scripts/aaro_jd_daily_egg.js >> /scripts/logs/aaro_jd_daily_egg.log 2>&1
+# 小鸽有礼-每日抽奖
+13 1,22,23 * * * node /scripts/aaro_jd_daily_lottery.js >> /scripts/logs/aaro_jd_daily_lottery.log 2>&1
+# 东东世界
+15 3,9 * * * node /scripts/aaro_jd_ddworld.js >> /scripts/logs/aaro_jd_ddworld.log 2>&1
+# 零食街
+0 9 * * * node /scripts/aaro_jd_foodRunning.js >> /scripts/logs/aaro_jd_foodRunning.log 2>&1
+# 金榜创造营
+13 1,22 * * * node /scripts/aaro_jd_gold_creator.js >> /scripts/logs/aaro_jd_gold_creator.log 2>&1
+# 东东健康社区
+13 1,6,22 * * * node /scripts/aaro_jd_health.js >> /scripts/logs/aaro_jd_health.log 2>&1
+# 东东健康社区收集能量收集
+5-45/20 * * * * node /scripts/aaro_jd_health_collect.js >> /scripts/logs/aaro_jd_health_collect.log 2>&1
+# 东东工厂
+10 * * * * node /scripts/aaro_jd_jdfactory.js >> /scripts/logs/aaro_jd_jdfactory.log 2>&1
+# 京东赚赚
+10 0 * * * node /scripts/aaro_jd_jdzz.js >> /scripts/logs/aaro_jd_jdzz.log 2>&1
+# 领金贴
+10 0 * * * node /scripts/aaro_jd_jin_tie.js >> /scripts/logs/aaro_jd_jin_tie.log 2>&1
+# 宠汪汪
+15 0-23/2 * * * node /scripts/aaro_jd_joy.js >> /scripts/logs/aaro_jd_joy.log 2>&1
+# 宠汪汪🐕喂食
+15 0-23/1 * * * node /scripts/aaro_jd_joy_feedPets.js >> /scripts/logs/aaro_jd_joy_feedPets.log 2>&1
+# 宠汪汪强制为别人助力
+0 9 * * * node /scripts/aaro_jd_joy_help.js >> /scripts/logs/aaro_jd_joy_help.log 2>&1
+# 宠汪汪积分兑换奖品
+59 7,15,23 * * * node /scripts/aaro_jd_joy_reward.js >> /scripts/logs/aaro_jd_joy_reward.log 2>&1
+# 宠汪汪赛跑
+15 10 * * * node /scripts/aaro_jd_joy_run.js >> /scripts/logs/aaro_jd_joy_run.log 2>&1
+# 宠汪汪偷好友积分与狗粮
+10 0-21/3 * * * node /scripts/aaro_jd_joy_steal.js >> /scripts/logs/aaro_jd_joy_steal.log 2>&1
+# 跳跳乐瓜分京豆
+1 0,11,21 * * * node /scripts/aaro_jd_jump.js >> /scripts/logs/aaro_jd_jump.log 2>&1
+# 京喜领88元红包
+4 2,10 * * * node /scripts/aaro_jd_jxlhb.js >> /scripts/logs/aaro_jd_jxlhb.log 2>&1
+# 京喜牧场
+20 0-23/3 * * * node /scripts/aaro_jd_jxmc.js >> /scripts/logs/aaro_jd_jxmc.log 2>&1
+# 京喜农场
+0 9,12,18 * * * node /scripts/aaro_jd_jxnc.js >> /scripts/logs/aaro_jd_jxnc.log 2>&1
+# 京东快递签到
+10 0 * * * node /scripts/aaro_jd_kd.js >> /scripts/logs/aaro_jd_kd.log 2>&1
+# 京东抽奖机&内部互助
+0 9 * * * node /scripts/aaro_jd_lotteryMachine.js >> /scripts/logs/aaro_jd_lotteryMachine.log 2>&1
+# 幸运大转盘
+4 10 * * * node /scripts/aaro_jd_market_lottery.js >> /scripts/logs/aaro_jd_market_lottery.log 2>&1
+# 京东小魔方
+31 2,8 * * * node /scripts/aaro_jd_mf.js >> /scripts/logs/aaro_jd_mf.log 2>&1
+# 5G超级盲盒
+0 0,1-23/3 * * * node /scripts/aaro_jd_mohe.js >> /scripts/logs/aaro_jd_mohe.log 2>&1
+# 京东摇钱树
+3 0-23/2 * * * node /scripts/aaro_jd_moneyTree.js >> /scripts/logs/aaro_jd_moneyTree.log 2>&1
+# 京东秒秒币
+10 7 * * * node /scripts/aaro_jd_ms.js >> /scripts/logs/aaro_jd_ms.log 2>&1
+# 女装盲盒抽京豆
+35 1,23 * * * node /scripts/aaro_jd_nzmh.js >> /scripts/logs/aaro_jd_nzmh.log 2>&1
+# 东东萌宠
+15 6-18/6 * * * node /scripts/aaro_jd_pet.js >> /scripts/logs/aaro_jd_pet.log 2>&1
+# 金融养猪
+12 0-23/6 * * * node /scripts/aaro_jd_pigPet.js >> /scripts/logs/aaro_jd_pigPet.log 2>&1
+# 京东种豆得豆
+1 7-21/2 * * * node /scripts/aaro_jd_plantBean.js >> /scripts/logs/aaro_jd_plantBean.log 2>&1
+# 京东全民开红包
+1 1,2,23 * * * node /scripts/aaro_jd_redPacket.js >> /scripts/logs/aaro_jd_redPacket.log 2>&1
+# 送豆得豆
+45 1,12 * * * node /scripts/aaro_jd_sendBeans.js >> /scripts/logs/aaro_jd_sendBeans.log 2>&1
+# 闪购盲盒
+20 8 * * * node /scripts/aaro_jd_sgmh.js >> /scripts/logs/aaro_jd_sgmh.log 2>&1
+# 进店领豆
+10 0 * * * node /scripts/aaro_jd_shop.js >> /scripts/logs/aaro_jd_shop.log 2>&1
+# 东东小窝
+16 22 * * * node /scripts/aaro_jd_small_home.js >> /scripts/logs/aaro_jd_small_home.log 2>&1
+# ✈️天天加速
+8 0-23/3 * * * node /scripts/aaro_jd_speed.js >> /scripts/logs/aaro_jd_speed.log 2>&1
+# 京东极速版红包
+20 0,22 * * * node /scripts/aaro_jd_speed_redpocke.js >> /scripts/logs/aaro_jd_speed_redpocke.log 2>&1
+# 京东极速版
+21 3,8 * * * node /scripts/aaro_jd_speed_sign.js >> /scripts/logs/aaro_jd_speed_sign.log 2>&1
+# 东东超市
+11 * * * * node /scripts/aaro_jd_superMarket.js >> /scripts/logs/aaro_jd_superMarket.log 2>&1
+# 赚京豆
+10 0,7,23 * * * node /scripts/aaro_jd_syj.js >> /scripts/logs/aaro_jd_syj.log 2>&1
+# 众筹许愿池
+40 0,2 * * * node /scripts/aaro_jd_wish.js >> /scripts/logs/aaro_jd_wish.log 2>&1

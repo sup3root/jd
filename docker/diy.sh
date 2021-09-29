@@ -1,7 +1,7 @@
 #!/bin/sh
 set -e
 
-# 同步的git仓库 lingfeng0918-jd_scripts star261-jd zero205-JD_tencent_scf 
+# 同步的git仓库 lingfeng0918-jd_scripts star261-jd zero205-JD_tencent_scf aaron-lv-sync 
 
 #    git remote set-url origin "$repo"
 #    git reset --hard
