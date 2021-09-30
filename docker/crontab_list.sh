@@ -11,8 +11,6 @@ PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 0 9 * * * node /scripts/zero_jd_bean_change.js >> /scripts/logs/zero_jd_bean_change.log 2>&1
 # 领京豆额外奖励
 10 7 * * * node /scripts/jd_bean_home.js >> /scripts/logs/jd_bean_home.log 2>&1
-# 京东多合一签到
-0 0 * * * node /scripts/jd_bean_sign.js >> /scripts/logs/jd_bean_sign.log 2>&1
 # 省钱大赢家之翻翻乐
 20 * * * * node /scripts/jd_big_winner.js >> /scripts/logs/jd_big_winner.log 2>&1
 # 口袋书店
@@ -39,6 +37,7 @@ PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 50 * * * * node /scripts/jd_dreamFactory_help.js >> /scripts/logs/jd_dreamFactory_help.log 2>&1
 # 东东农场
 5 6-18/6 * * * node /scripts/jd_fruit.js >> /scripts/logs/jd_fruit.log 2>&1
+7 10,14,20 * * * node /scripts/zero_jd_fruit.js >> /scripts/logs/zero_jd_fruit.log 2>&1
 # 获取互助码
 20 13 * * 6 node /scripts/jd_get_share_code.js >> /scripts/logs/jd_get_share_code.log 2>&1
 # 金榜创造营
@@ -55,12 +54,10 @@ PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 10 0 * * * node /scripts/jd_jin_tie.js >> /scripts/logs/jd_jin_tie.log 2>&1
 # 宠汪汪🐕喂食
 15 0-23/1 * * * node /scripts/jd_joy_feedPets.js >> /scripts/logs/jd_joy_feedPets.log 2>&1
-# 宠汪汪强制为别人助力
-0 0 * * * node /scripts/jd_joy_help.js >> /scripts/logs/jd_joy_help.log 2>&1
 # 宠汪汪二代目
 10 */2 * * * node /scripts/jd_joy_new.js >> /scripts/logs/jd_joy_new.log 2>&1
 # 宠汪汪积分兑换奖品
-59 7,15,23 * * * node /scripts/jd_joy_reward_new.js >> /scripts/logs/jd_joy_reward_new.log 2>&1
+#59 7,15,23 * * * node /scripts/jd_joy_reward_new.js >> /scripts/logs/jd_joy_reward_new.log 2>&1
 # 宠汪汪赛跑
 15 10 * * * node /scripts/jd_joy_run.js >> /scripts/logs/jd_joy_run.log 2>&1
 # 宠汪汪偷好友积分与狗粮
@@ -106,7 +103,7 @@ PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 # 进店领豆
 10 0 * * * node /scripts/jd_shop.js >> /scripts/logs/jd_shop.log 2>&1
 # 京东签到图形验证
-0 0 * * * node /scripts/jd_sign_graphics.js >> /scripts/logs/jd_sign_graphics.log 2>&1
+5 0 * * * node /scripts/jd_sign_graphics.js >> /scripts/logs/jd_sign_graphics.log 2>&1
 # 东东小窝
 16 22 * * * node /scripts/jd_small_home.js >> /scripts/logs/jd_small_home.log 2>&1
 # ✈️天天加速
@@ -132,7 +129,7 @@ PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 # 领京豆额外奖励
 23 1,12,22 * * * node /scripts/ling_jd_bean_home.js >> /scripts/logs/ling_jd_bean_home.log 2>&1
 # 京东多合一签到
-0 0 * * * node /scripts/ling_jd_bean_sign.js >> /scripts/logs/ling_jd_bean_sign.log 2>&1
+5 0 * * * node /scripts/ling_jd_bean_sign.js >> /scripts/logs/ling_jd_bean_sign.log 2>&1
 # 东东超市兑换奖品
 59 23 * * * node /scripts/ling_jd_blueCoin.js >> /scripts/logs/ling_jd_blueCoin.log 2>&1
 # 口袋书店
@@ -182,7 +179,7 @@ PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 # 宠汪汪🐕喂食
 15 0-23/1 * * * node /scripts/ling_jd_joy_feedPets.js >> /scripts/logs/ling_jd_joy_feedPets.log 2>&1
 # 宠汪汪积分兑换奖品
-59 7,15,23 * * * node /scripts/ling_jd_joy_reward.js >> /scripts/logs/ling_jd_joy_reward.log 2>&1
+#59 7,15,23 * * * node /scripts/ling_jd_joy_reward.js >> /scripts/logs/ling_jd_joy_reward.log 2>&1
 # 宠汪汪赛跑
 15 10 * * * node /scripts/ling_jd_joy_run.js >> /scripts/logs/ling_jd_joy_run.log 2>&1
 # 宠汪汪偷好友积分与狗粮
@@ -261,7 +258,7 @@ PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 # 进店领豆
 10 0 * * * node /scripts/ling_jd_shop.js >> /scripts/logs/ling_jd_shop.log 2>&1
 # 京东签到图形验证
-0 0 * * * node /scripts/ling_jd_sign_graphics.js >> /scripts/logs/ling_jd_sign_graphics.log 2>&1
+3 0 * * * node /scripts/ling_jd_sign_graphics.js >> /scripts/logs/ling_jd_sign_graphics.log 2>&1
 # 东东小窝
 16 22 * * * node /scripts/ling_jd_small_home.js >> /scripts/logs/ling_jd_small_home.log 2>&1
 # ✈️天天加速
@@ -365,7 +362,7 @@ PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 # 汪汪乐园每日任务
 0 0,7,9,17,20 * * * node /scripts/zero_jd_joy_park_task.js >> /scripts/logs/zero_jd_joy_park_task.log 2>&1
 # 宠汪汪积分兑换奖品
-59 7,15,23 * * * node /scripts/zero_jd_joy_reward.js >> /scripts/logs/zero_jd_joy_reward.log 2>&1
+#59 7,15,23 * * * node /scripts/zero_jd_joy_reward.js >> /scripts/logs/zero_jd_joy_reward.log 2>&1
 # 宠汪汪赛跑
 45 14,19 * * * node /scripts/zero_jd_joy_run.js >> /scripts/logs/zero_jd_joy_run.log 2>&1
 # 宠汪汪偷好友积分与狗粮
@@ -409,7 +406,7 @@ PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 # 进店领豆
 0 0 * * * node /scripts/zero_jd_shop.js >> /scripts/logs/zero_jd_shop.log 2>&1
 # 京东签到图形验证
-0 0 * * * node /scripts/zero_jd_sign_graphics.js >> /scripts/logs/zero_jd_sign_graphics.log 2>&1
+5 0 * * * node /scripts/zero_jd_sign_graphics.js >> /scripts/logs/zero_jd_sign_graphics.log 2>&1
 # 东东小窝
 16 22 * * * node /scripts/zero_jd_small_home.js >> /scripts/logs/zero_jd_small_home.log 2>&1
 # 京东极速版红包
@@ -436,10 +433,6 @@ PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 20 0,16 * * * node /scripts/zero_jd_ttpt.js >> /scripts/logs/zero_jd_ttpt.log 2>&1
 # 领京豆额外奖励
 23 1,12,22 * * * node /scripts/aaro_jd_bean_home.js >> /scripts/logs/aaro_jd_bean_home.log 2>&1
-# 京东多合一签到
-0 9 * * * node /scripts/aaro_jd_bean_sign.js >> /scripts/logs/aaro_jd_bean_sign.log 2>&1
-# 美丽研究院
-0 9 * * * node /scripts/aaro_jd_beauty.js >> /scripts/logs/aaro_jd_beauty.log 2>&1
 # 省钱大赢家之翻翻乐
 20 * * * * node /scripts/aaro_jd_big_winner.js >> /scripts/logs/aaro_jd_big_winner.log 2>&1
 # 京东超市兑换
@@ -484,10 +477,6 @@ PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 15 0-23/2 * * * node /scripts/aaro_jd_joy.js >> /scripts/logs/aaro_jd_joy.log 2>&1
 # 宠汪汪🐕喂食
 15 0-23/1 * * * node /scripts/aaro_jd_joy_feedPets.js >> /scripts/logs/aaro_jd_joy_feedPets.log 2>&1
-# 宠汪汪强制为别人助力
-0 9 * * * node /scripts/aaro_jd_joy_help.js >> /scripts/logs/aaro_jd_joy_help.log 2>&1
-# 宠汪汪积分兑换奖品
-59 7,15,23 * * * node /scripts/aaro_jd_joy_reward.js >> /scripts/logs/aaro_jd_joy_reward.log 2>&1
 # 宠汪汪赛跑
 15 10 * * * node /scripts/aaro_jd_joy_run.js >> /scripts/logs/aaro_jd_joy_run.log 2>&1
 # 宠汪汪偷好友积分与狗粮
@@ -516,8 +505,6 @@ PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 10 7 * * * node /scripts/aaro_jd_ms.js >> /scripts/logs/aaro_jd_ms.log 2>&1
 # 女装盲盒抽京豆
 35 1,23 * * * node /scripts/aaro_jd_nzmh.js >> /scripts/logs/aaro_jd_nzmh.log 2>&1
-# 东东萌宠
-15 6-18/6 * * * node /scripts/aaro_jd_pet.js >> /scripts/logs/aaro_jd_pet.log 2>&1
 # 金融养猪
 12 0-23/6 * * * node /scripts/aaro_jd_pigPet.js >> /scripts/logs/aaro_jd_pigPet.log 2>&1
 # 京东种豆得豆
@@ -544,3 +531,5 @@ PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 10 0,7,23 * * * node /scripts/aaro_jd_syj.js >> /scripts/logs/aaro_jd_syj.log 2>&1
 # 众筹许愿池
 40 0,2 * * * node /scripts/aaro_jd_wish.js >> /scripts/logs/aaro_jd_wish.log 2>&1
+# 荣耀新品传送挑战
+7 10 1-15 10 * node /scripts/star_jd_honour.js >> /scripts/logs/star_jd_honour.log 2>&1

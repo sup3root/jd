@@ -560,9 +560,11 @@ PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 0 9 * * * node /scripts/star_jd_fan.js >> /scripts/logs/star_jd_fan.log 2>&1
 # 金像奖助力
 0 9 * * * node /scripts/star_jd_goldenStaue.js >> /scripts/logs/star_jd_goldenStaue.log 2>&1
+# 荣耀新品传送挑战
+0 9 * * * node /scripts/star_jd_honour.js >> /scripts/logs/star_jd_honour.log 2>&1
 # 惊喜牧场
 0 9 * * * node /scripts/star_jd_jxmc.js >> /scripts/logs/star_jd_jxmc.log 2>&1
-# 特务Z
+# 特务
 0 9 * * * node /scripts/star_jd_productZ4Brand.js >> /scripts/logs/star_jd_productZ4Brand.log 2>&1
 # 明星小店
 0 9 * * * node /scripts/star_jd_star_shop.js >> /scripts/logs/star_jd_star_shop.log 2>&1
@@ -706,8 +708,8 @@ PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 0 7 * * * node /scripts/zero_jd_speed_sign.js >> /scripts/logs/zero_jd_speed_sign.log 2>&1
 # 明星小店
 0 9 * * * node /scripts/zero_jd_star_shop.js >> /scripts/logs/zero_jd_star_shop.log 2>&1
-# 特物Z|万物皆可国创
-30 11 * * * node /scripts/zero_jd_superBrand.js >> /scripts/logs/zero_jd_superBrand.log 2>&1
+# 特务
+0 9 * * * node /scripts/zero_jd_superBrand.js >> /scripts/logs/zero_jd_superBrand.log 2>&1
 # 东东超市
 11 0,6-23 * * * node /scripts/zero_jd_superMarket.js >> /scripts/logs/zero_jd_superMarket.log 2>&1
 # 赚京豆

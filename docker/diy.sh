@@ -33,7 +33,7 @@ do
     done
 done
 
-cp -r /ropo/lingfeng0918-jd_scripts/utils/ /scripts/
+cp -r /repo/lingfeng0918-jd_scripts/utils/ /scripts/
 
 # js 文件生成 crontab_list.test 
 bash /scripts/updateCronlist.sh

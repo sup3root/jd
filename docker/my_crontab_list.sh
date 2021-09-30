@@ -40,7 +40,3 @@
 #59 23 * * * sleep 59; node /scripts/jd_car.js >/dev/null 2>&1
 #0 0 * * * node /scripts/jd_car.js >/dev/null 2>&1
 #59 23 * * * sleep 61; node /scripts/jd_car.js >/dev/null 2>&1    
-## 宠汪汪积分兑换京豆
-#59 7,15,23 * * * sleep 59; node /scripts/jd_joy_reward.js >>/scripts/logs/jd_joy_reward.log 2>&1
-#0 0,8,16 * * * node /scripts/jd_joy_reward.js >/dev/null 2>&1
-
