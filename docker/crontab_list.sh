@@ -5,7 +5,7 @@ PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 # 收集助力码 
 30 * * * * sh +x /scripts/docker/auto_help.sh collect >> /scripts/logs/auto_help_collect.log 2>&1 
 # 配置更新 
-17 3 * * * sh /scripts/docker/default_task.sh >> /scripts/logs/default_task.log 2>&1
+17 3 * * * bash /scripts/docker/default_task.sh >> /scripts/logs/default_task.log 2>&1
 ###################临时取消运行#############################
 # 宠汪汪积分兑换奖品
 #59 7,15,23 * * * node /scripts/aaro_jd_joy_reward.js >> /scripts/logs/aaro_jd_joy_reward.log 2>&1
@@ -54,10 +54,6 @@ PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
  1 0 * * node /scripts/ling_jd_ppdz.js >> /scripts/logs/ling_jd_ppdz.log 2>&1
 # 东东超市
 11 0,6-23 * * * node /scripts/zero_jd_superMarket.js >> /scripts/logs/zero_jd_superMarket.log 2>&1
-# 东东超市兑换奖品
-59 23 * * * node /scripts/aaro_jd_blueCoin.js >> /scripts/logs/aaro_jd_blueCoin.log 2>&1
-# 东东超市兑换奖品
-59 23 * * * node /scripts/ling_jd_blueCoin.js >> /scripts/logs/ling_jd_blueCoin.log 2>&1
 # 东东超市兑换奖品
 59 23 * * * node /scripts/zero_jd_blueCoin.js >> /scripts/logs/zero_jd_blueCoin.log 2>&1
 # 京东全民开红包
@@ -242,3 +238,5 @@ PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 10 0 * * * node /scripts/zero_jd_jin_tie.js >> /scripts/logs/zero_jd_jin_tie.log 2>&1
 # 女装盲盒
 35 8,12 * * * node /scripts/zero_jd_nzmh.js >> /scripts/logs/zero_jd_nzmh.log 2>&1
+# 京东萌宠
+15 6-18/6 * * * node /scripts/jd_pet.js >> /scripts/logs/jd_pet.log 2>&1
