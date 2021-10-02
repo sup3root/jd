@@ -32,8 +32,8 @@ PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 15 0 * * * node /scripts/aaro_jd_ccSign.js >> /scripts/logs/aaro_jd_ccSign.log 2>&1
 # 京喜财富岛
 5 * * * * node /scripts/aaro_jd_cfd.js >> /scripts/logs/aaro_jd_cfd.log 2>&1
-# 京喜财富岛热气球挂机
-0 9 * * * node /scripts/aaro_jd_cfd_loop.js >> /scripts/logs/aaro_jd_cfd_loop.log 2>&1
+# 京喜财富岛热气球
+30 * * * * node /scripts/aaro_jd_cfd_loop.js >> /scripts/logs/aaro_jd_cfd_loop.log 2>&1
 # 京喜财富岛合成月饼
 5 * * * * node /scripts/aaro_jd_cfd_mooncake.js >> /scripts/logs/aaro_jd_cfd_mooncake.log 2>&1
 # 摇京豆
@@ -462,8 +462,8 @@ PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 6 9,12 * * * node /scripts/ling_jd_mb.js >> /scripts/logs/ling_jd_mb.log 2>&1
 # 新潮品牌狂欢
 4 10 * * * node /scripts/ling_jd_mcxhd.js >> /scripts/logs/ling_jd_mcxhd.log 2>&1
-# 集魔方
-11 10 * * *  node /scripts/ling_jd_mofang.js >> /scripts/logs/ling_jd_mofang.log 2>&1
+# 京东小魔方
+31 2,8 * * * node /scripts/ling_jd_mofang.js >> /scripts/logs/ling_jd_mofang.log 2>&1
 # 5G超级盲盒
 0 0,1-23/3 * * * node /scripts/ling_jd_mohe.js >> /scripts/logs/ling_jd_mohe.log 2>&1
 # 京东摇钱树
@@ -564,8 +564,8 @@ PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 0 9 * * * node /scripts/star_jd_honour.js >> /scripts/logs/star_jd_honour.log 2>&1
 # 惊喜牧场
 0 9 * * * node /scripts/star_jd_jxmc.js >> /scripts/logs/star_jd_jxmc.log 2>&1
-# 特务
-23 9 * * *  node /scripts/star_jd_productZ4Brand.js >> /scripts/logs/star_jd_productZ4Brand.log 2>&1
+# 特务Z
+23 8,9 * * *  node /scripts/star_jd_productZ4Brand.js >> /scripts/logs/star_jd_productZ4Brand.log 2>&1
 # 明星小店
 12 19 19-30 9 *  node /scripts/star_jd_star_shop.js >> /scripts/logs/star_jd_star_shop.log 2>&1
 # 古蜀寻宝
@@ -594,8 +594,8 @@ PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 15 0 * * * node /scripts/zero_jd_ccSign.js >> /scripts/logs/zero_jd_ccSign.log 2>&1
 # 京喜财富岛
 5 0,6-23 * * * node /scripts/zero_jd_cfd.js >> /scripts/logs/zero_jd_cfd.log 2>&1
-# 京喜财富岛热气球挂机
-0 9 * * * node /scripts/zero_jd_cfd_loop.js >> /scripts/logs/zero_jd_cfd_loop.log 2>&1
+# 京喜财富岛热气球
+30 * * * * node /scripts/zero_jd_cfd_loop.js >> /scripts/logs/zero_jd_cfd_loop.log 2>&1
 # 京喜财富岛合成月饼
 10 6,13,23 * * * node /scripts/zero_jd_cfd_mooncake.js >> /scripts/logs/zero_jd_cfd_mooncake.log 2>&1
 # 摇京豆
@@ -649,7 +649,7 @@ PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 # 宠汪汪积分兑换奖品
 59 7,15,23 * * * node /scripts/zero_jd_joy_reward.js >> /scripts/logs/zero_jd_joy_reward.log 2>&1
 # 宠汪汪赛跑
-45 14,19 * * * node /scripts/zero_jd_joy_run.js >> /scripts/logs/zero_jd_joy_run.log 2>&1
+15 10 * * * node /scripts/zero_jd_joy_run.js >> /scripts/logs/zero_jd_joy_run.log 2>&1
 # 宠汪汪偷好友积分与狗粮
 10 0-21/3 * * * node /scripts/zero_jd_joy_steal.js >> /scripts/logs/zero_jd_joy_steal.log 2>&1
 # 跳跳乐瓜分京豆
@@ -708,8 +708,8 @@ PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 0 7 * * * node /scripts/zero_jd_speed_sign.js >> /scripts/logs/zero_jd_speed_sign.log 2>&1
 # 明星小店
 12 19 19-30 9 *  node /scripts/zero_jd_star_shop.js >> /scripts/logs/zero_jd_star_shop.log 2>&1
-# 特务
-23 9 * * *  node /scripts/zero_jd_superBrand.js >> /scripts/logs/zero_jd_superBrand.log 2>&1
+# 特务Z
+23 8,9 * * *  node /scripts/zero_jd_superBrand.js >> /scripts/logs/zero_jd_superBrand.log 2>&1
 # 东东超市
 11 0,6-23 * * * node /scripts/zero_jd_superMarket.js >> /scripts/logs/zero_jd_superMarket.log 2>&1
 # 赚京豆

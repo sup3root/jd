@@ -6,6 +6,8 @@
 13 3 */2 * * cd /repo/sunert-script && git pull >> /scripts/logs/gitpull_sunert.log 2>&1
 19 10,21 * * * sh /scripts/docker/diy.sh >>/scripts/logs/diy.log 2>&1
 
+# 多合一签到
+#3 0 * * * node /scripts/JD_DailyBonus.js >>/scripts/logs/JD_DailyBonus.log 2>&1
 # 只开卡不关注
 50 7,14 * * * . /repo/.bashrc && bash /repo/curtinlvJD-script/run.sh -r /repo/curtinlvJD-script/OpenCard/jd_OpenCard.py >/dev/null 2>&1
 # 财富大陆（京喜财富岛）
