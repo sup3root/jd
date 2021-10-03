@@ -139,8 +139,6 @@ PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 10 * * * * node /scripts/jd_daily_egg.js >> /scripts/logs/jd_daily_egg.log 2>&1
 # 天天赚京豆
 20 8 * * * node /scripts/ling_jd_ttzjd.js >> /scripts/logs/ling_jd_ttzjd.log 2>&1
-# 女装盲盒抽京豆
-35 8,12 * * * node /scripts/zero_jd_nzmh.js >> /scripts/logs/zero_jd_nzmh.log 2>&1
 # 宠汪汪二代目
 13 6-18/6 * * * node /scripts/jd_joy_new.js >> /scripts/logs/jd_joy_new.log 2>&1
 # 宠汪汪偷好友积分与狗粮
@@ -152,8 +150,6 @@ PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 15 0-23/1 * * * node /scripts/jd_joy_feedPets.js >> /scripts/logs/jd_joy_feedPets.log 2>&1
 # 小鸽有礼-每日抽奖
 13 1,22,23 * * * node /scripts/ling_jd_daily_lottery.js >> /scripts/logs/ling_jd_daily_lottery.log 2>&1
-# 希捷品牌日瓜分百万京豆
-0 9 * * * node /scripts/ling_jd_SeagateBrand.js >> /scripts/logs/ling_jd_SeagateBrand.log 2>&1
 # 幸运大转盘
 4 10 * * * node /scripts/ling_jd_market_lottery.js >> /scripts/logs/ling_jd_market_lottery.log 2>&1
 # 惊喜牧场

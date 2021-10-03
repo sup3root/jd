@@ -5,7 +5,7 @@ PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 # 收集助力码 
 30 * * * * sh +x /scripts/docker/auto_help.sh collect >> /scripts/logs/auto_help_collect.log 2>&1 
 # 配置更新 
-17 3 * * * sh /scripts/docker/default_task.sh >> /scripts/logs/default_task.log 2>&1
+17 3 * * * bash /scripts/docker/default_task.sh >> /scripts/logs/default_task.log 2>&1
 ###################临时取消运行#############################
 ###################临时取消运行#############################
 # 京东资产变动通知

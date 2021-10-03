@@ -18,9 +18,9 @@ repos=$(find /repo -maxdepth 1 -type d \
         -not -path '*smiek2221*')
 for f in $repos
 do
-    git -C $f fetch --all
-    git -C $f reset --hard
-    git -C $f pull
+    cd $f
+    git fetch --all
+    git reset --hard origin/$(git branch --show-current)
     jsfiles=$(find $f -type f -name 'jd_*.js' \
                 -not -path '*utils*' \
                 -not -path '*activity*' \
