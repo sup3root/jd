@@ -19,6 +19,7 @@ repos=$(find /repo -maxdepth 1 -type d \
 for f in $repos
 do
     cd $f
+    echo "$f"
     git fetch --all
     git reset --hard origin/$(git branch --show-current)
     jsfiles=$(find $f -type f -name 'jd_*.js' \

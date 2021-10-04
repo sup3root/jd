@@ -32,7 +32,7 @@ PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 # MM领京豆
 21 9 * * * node /scripts/zero_jd_ljd.js >> /scripts/logs/zero_jd_ljd.log 2>&1
 # QQ星系牧场
-45 0,6-23/2 * * * node /scripts/zero_jd_qqxing.js >> /scripts/logs/zero_jd_qqxing.log 2>&1
+#45 0,6-23/2 * * * node /scripts/zero_jd_qqxing.js >> /scripts/logs/zero_jd_qqxing.log 2>&1
 # ✈️天天加速
 8 0-23/3 * * * node /scripts/jd_speed.js >> /scripts/logs/jd_speed.log 2>&1
 # 东东世界
@@ -55,7 +55,7 @@ PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 # 东东超市
 11 0,6-23 * * * node /scripts/zero_jd_superMarket.js >> /scripts/logs/zero_jd_superMarket.log 2>&1
 # 东东超市兑换奖品
-59 23 * * * node /scripts/zero_jd_blueCoin.js >> /scripts/logs/zero_jd_blueCoin.log 2>&1
+#59 23 * * * node /scripts/zero_jd_blueCoin.js >> /scripts/logs/zero_jd_blueCoin.log 2>&1
 # 京东全民开红包
 1 1,2,23 * * * node /scripts/jd_redPacket.js >> /scripts/logs/jd_redPacket.log 2>&1
 1 7,12,20 * * * node /scripts/zero_jd_redPacket.js >> /scripts/logs/zero_jd_redPacket.log 2>&1
@@ -116,19 +116,17 @@ PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 # 众筹许愿池
 40 0,2 * * * node /scripts/zero_jd_wish.js >> /scripts/logs/zero_jd_wish.log 2>&1
 # 健康社区收取能量
-25 0,6-23 * * * node /scripts/zero_jd_z_health_energy.js >> /scripts/logs/zero_jd_z_health_energy.log 2>&1
+45 6-23/2 * * * node /scripts/zero_jd_z_health_energy.js >> /scripts/logs/zero_jd_z_health_energy.log 2>&1
 # 全民挖现金
 0 9 * * * node /scripts/ling_jd_qmwxj.js >> /scripts/logs/ling_jd_qmwxj.log 2>&1
 # 全民摸冰
-6 9,12 * * * node /scripts/ling_jd_mb.js >> /scripts/logs/ling_jd_mb.log 2>&1
-# 内容鉴赏官
-15 3,6 * * * node /scripts/zero_jd_connoisseur.js >> /scripts/logs/zero_jd_connoisseur.log 2>&1
+#6 9,12 * * * node /scripts/ling_jd_mb.js >> /scripts/logs/ling_jd_mb.log 2>&1
 # 取关京东店铺和商品
 55 23 * * * node /scripts/zero_jd_unsubscribe.js >> /scripts/logs/zero_jd_unsubscribe.log 2>&1
 # 取关所有主播
 55 6 * * * node /scripts/zero_jd_unsubscriLive.js >> /scripts/logs/zero_jd_unsubscriLive.log 2>&1
 # 口袋书店
-1 8,12,18 * * * node /scripts/zero_jd_bookshop.js >> /scripts/logs/zero_jd_bookshop.log 2>&1
+#1 8,12,18 * * * node /scripts/zero_jd_bookshop.js >> /scripts/logs/zero_jd_bookshop.log 2>&1
 # 古蜀寻宝
 12 9,15 1-30 9,10 *  node /scripts/star_jd_xinxiangyin.js >> /scripts/logs/star_jd_xinxiangyin.log 2>&1
 # 天天优惠大乐透
@@ -154,8 +152,6 @@ PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 4 10 * * * node /scripts/ling_jd_market_lottery.js >> /scripts/logs/ling_jd_market_lottery.log 2>&1
 # 惊喜牧场
 20 */3 * * * node /scripts/zero_jd_jxmc.js >> /scripts/logs/zero_jd_jxmc.log 2>&1
-# 推一推
-0 0 * * * node /scripts/ling_jd_tyt.js >> /scripts/logs/ling_jd_tyt.log 2>&1
 # 摇京豆
 5 0,23 * * * node /scripts/zero_jd_club_lottery.js >> /scripts/logs/zero_jd_club_lottery.log 2>&1
 # 新潮品牌狂欢
@@ -163,7 +159,7 @@ PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 # 明星小店
 12 19 19-30 9 *  node /scripts/zero_jd_star_shop.js >> /scripts/logs/zero_jd_star_shop.log 2>&1
 # 来电好物季
-35 8 * * * node /scripts/ling_jd_ldhwj.js >> /scripts/logs/ling_jd_ldhwj.log 2>&1
+#35 8 * * * node /scripts/ling_jd_ldhwj.js >> /scripts/logs/ling_jd_ldhwj.log 2>&1
 # 柠檬京东零食街
 0 9 * * * node /scripts/zero_jd_lsj.js >> /scripts/logs/zero_jd_lsj.log 2>&1
 # 柠檬伊利养牛记
@@ -172,26 +168,20 @@ PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 0 6-23/4 * * * node /scripts/zero_jd_tyt.js >> /scripts/logs/zero_jd_tyt.log 2>&1
 # 柠檬赚金币
 0 7 * * * node /scripts/zero_jd_zjb.js >> /scripts/logs/zero_jd_zjb.log 2>&1
-# 柠檬邀请有礼
-0 10 * * * node /scripts/ling_jd_yqyl.js >> /scripts/logs/ling_jd_yqyl.log 2>&1
 # 汪汪乐园养joy
-20 0-23/3 * * * node /scripts/zero_jd_joy_park.js >> /scripts/logs/zero_jd_joy_park.log 2>&1
+#20 0-23/3 * * * node /scripts/zero_jd_joy_park.js >> /scripts/logs/zero_jd_joy_park.log 2>&1
 # 汪汪乐园开工位
-20 9 * * * node /scripts/ling_jd_joypark_open.js >> /scripts/logs/ling_jd_joypark_open.log 2>&1
+#20 9 * * * node /scripts/ling_jd_joypark_open.js >> /scripts/logs/ling_jd_joypark_open.log 2>&1
 # 汪汪乐园每日任务
-0 0,7,9,17,20 * * * node /scripts/zero_jd_joy_park_task.js >> /scripts/logs/zero_jd_joy_park_task.log 2>&1
-# 汪汪乐园过新手任务
-0 9 * * * node /scripts/zero_jd_joy_park_newtask.js >> /scripts/logs/zero_jd_joy_park_newtask.log 2>&1
+#0 0,7,9,17,20 * * * node /scripts/zero_jd_joy_park_task.js >> /scripts/logs/zero_jd_joy_park_task.log 2>&1
 # 点点券
 20 0,20 * * * node /scripts/ling_jd_necklace.js >> /scripts/logs/ling_jd_necklace.log 2>&1
 # 热血心跳,狂解压
 0 9 * * * node /scripts/zero_jd_decompression.js >> /scripts/logs/zero_jd_decompression.log 2>&1
 # 特务
-23 8,9 * * *  node /scripts/zero_jd_superBrand.js >> /scripts/logs/zero_jd_superBrand.log 2>&1
+#23 8,9 * * *  node /scripts/zero_jd_superBrand.js >> /scripts/logs/zero_jd_superBrand.log 2>&1
 # 特务Z
 18 8,9 * * *  node /scripts/ling_jd_productZ4Brand.js >> /scripts/logs/ling_jd_productZ4Brand.log 2>&1
-# 特务Z行动-星小店
-20 0 * * * node /scripts/ling_jd_twz_star.js >> /scripts/logs/ling_jd_twz_star.log 2>&1
 # 积分换话费
 33 7,19 * * *  node /scripts/zero_jd_dwapp.js >> /scripts/logs/zero_jd_dwapp.log 2>&1
 # 签到领现金
@@ -199,23 +189,23 @@ PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 # 粉丝互动
 34 5,18 * * *  node /scripts/zero_jd_fan.js >> /scripts/logs/zero_jd_fan.log 2>&1
 # 美丽研究院
-1 7,12,19 * * *  node /scripts/zero_jd_beauty.js >> /scripts/logs/zero_jd_beauty.log 2>&1
+#1 7,12,19 * * *  node /scripts/zero_jd_beauty.js >> /scripts/logs/zero_jd_beauty.log 2>&1
 # 荣耀换新
-20 8 * * * node /scripts/ling_jd_ryhx.js >> /scripts/logs/ling_jd_ryhx.log 2>&1
+#20 8 * * * node /scripts/ling_jd_ryhx.js >> /scripts/logs/ling_jd_ryhx.log 2>&1
 # 荣耀新品传送挑战
 0 9 * * * node /scripts/star_jd_honour.js >> /scripts/logs/star_jd_honour.log 2>&1
 # 获取互助码
 20 13 * * 6 node /scripts/jd_get_share_code.js >> /scripts/logs/jd_get_share_code.log 2>&1
 # 赚京豆
-10 0,7,23 * * * node /scripts/zero_jd_syj.js >> /scripts/logs/zero_jd_syj.log 2>&1
+#10 0,7,23 * * * node /scripts/zero_jd_syj.js >> /scripts/logs/zero_jd_syj.log 2>&1
 # 进店领豆
  0 0 * * node /scripts/zero_jd_shop.js >> /scripts/logs/zero_jd_shop.log 2>&1
 # 送豆得豆
 45 1,12 * * * node /scripts/zero_jd_sddd.js >> /scripts/logs/zero_jd_sddd.log 2>&1
 # 金像奖助力
-0 9 * * * node /scripts/star_jd_goldenStaue.js >> /scripts/logs/star_jd_goldenStaue.log 2>&1
+#0 9 * * * node /scripts/star_jd_goldenStaue.js >> /scripts/logs/star_jd_goldenStaue.log 2>&1
 # 金机奖投票
-0 9 * * * node /scripts/ling_jd_golden_machine.js >> /scripts/logs/ling_jd_golden_machine.log 2>&1
+#0 9 * * * node /scripts/ling_jd_golden_machine.js >> /scripts/logs/ling_jd_golden_machine.log 2>&1
 # 金榜创造营
 13 1,22 * * * node /scripts/zero_jd_gold_creator.js >> /scripts/logs/zero_jd_gold_creator.log 2>&1
 # 金融养猪
@@ -236,3 +226,5 @@ PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 35 8,12 * * * node /scripts/zero_jd_nzmh.js >> /scripts/logs/zero_jd_nzmh.log 2>&1
 # 京东萌宠
 15 6-18/6 * * * node /scripts/jd_pet.js >> /scripts/logs/jd_pet.log 2>&1
+# 清空购物车
+57 23 * * * node /scripts/ling_jd_cleancart.js >> /scripts/logs/ling_jd_cleancart.log 2>&1

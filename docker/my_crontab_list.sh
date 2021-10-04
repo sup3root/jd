@@ -15,11 +15,11 @@
 # 升级赚京豆
 11 9 * * * node /scripts/gua_MMdou.js >> /scripts/logs/gua_MMdou.log 2>&1
 # 京东超市兑换
-59 23 * * * . /repo/.bashrc && python /repo/curtinlvJD-script/jd_blueCoin.py >>/scripts/logs/jd_blueCoin.log 2>&1
+#59 23 * * * . /repo/.bashrc && python /repo/curtinlvJD-script/jd_blueCoin.py >>/scripts/logs/jd_blueCoin.log 2>&1
 # 农场补充任务
 58 10,11 * * * node /scripts/jd_fruit_moreTask.js >>/scripts/logs/jd_fruit_moreTask.log 2>&1
 # 东东世界
-14 10,16,22 * * * node /scripts/jd_ddWorld.js >>/scripts/logs/jd_ddWorld.log 2>&1
+#14 10,16,22 * * * node /scripts/jd_ddWorld.js >>/scripts/logs/jd_ddWorld.log 2>&1
 
 
 
