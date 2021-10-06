@@ -228,3 +228,7 @@ PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 15 6-18/6 * * * node /scripts/jd_pet.js >> /scripts/logs/jd_pet.log 2>&1
 # 清空购物车
 57 23 * * * node /scripts/ling_jd_cleancart.js >> /scripts/logs/ling_jd_cleancart.log 2>&1
+# 芥么赚豪礼
+37 0,11 * * *  node /scripts/zero_jd_genz.js >> /scripts/logs/zero_jd_genz.log 2>&1
+# 芥么签到
+11 0,9 * * *  node /scripts/zero_jd_zsign.js >> /scripts/logs/zero_jd_zsign.log 2>&1
