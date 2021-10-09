@@ -8,7 +8,7 @@ FileCronlist=$WorkDir/docker/crontab_list.test
 
 ## crontab_list 头部内容
 
-echo -e "SHELL=/bin/bash \nPATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin \n# 每3天的23:50分清理一次日志(互助码不清理，proc_file.sh对该文件进行了去重) \n50 23 */3 * * find /scripts/logs -name '*.log' | grep -v 'sharecodeCollection' | xargs rm -rf \n# 收集助力码 \n30 * * * * sh +x /scripts/docker/auto_help.sh collect >> /scripts/logs/auto_help_collect.log 2>&1 \n# 配置更新 \n17 3 * * * bash /scripts/docker/default_task.sh >> /scripts/logs/default_task.log 2>&1\n###################临时取消运行#############################\n###################临时取消运行#############################" >$FileCronlist
+echo -e "SHELL=/bin/bash \nPATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin \n# 每3天的23:50分清理一次日志(互助码不清理，proc_file.sh对该文件进行了去重) \n50 23 */3 * * find /scripts/logs -name '*.log' | grep -v 'sharecodeCollection' | xargs rm -rf \n# 收集助力码 \n30 * * * * sh +x /scripts/docker/auto_help.sh collect >> /scripts/logs/auto_help_collect.log 2>&1 \n# 配置更新 \n17 3 * * * . /repo/addenv && bash /scripts/docker/default_task.sh >> /scripts/logs/default_task.log 2>&1\n###################临时取消运行#############################\n###################临时取消运行#############################" >$FileCronlist
 
 ## 执行写入
 

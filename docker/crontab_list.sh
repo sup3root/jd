@@ -5,7 +5,7 @@ PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 # 收集助力码 
 30 * * * * sh +x /scripts/docker/auto_help.sh collect >> /scripts/logs/auto_help_collect.log 2>&1 
 # 配置更新 
-17 3 * * * bash /scripts/docker/default_task.sh >> /scripts/logs/default_task.log 2>&1
+17 3 * * * . /repo/addenv && bash /scripts/docker/default_task.sh >> /scripts/logs/default_task.log 2>&1
 ###################临时取消运行#############################
 # 宠汪汪积分兑换奖品
 #59 7,15,23 * * * node /scripts/aaro_jd_joy_reward.js >> /scripts/logs/aaro_jd_joy_reward.log 2>&1
@@ -13,9 +13,8 @@ PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 #59 7,15,23 * * * node /scripts/jd_joy_reward_new.js >> /scripts/logs/jd_joy_reward_new.log 2>&1
 #59 7,15,23 * * * node /scripts/ling_jd_joy_reward.js >> /scripts/logs/ling_jd_joy_reward.log 2>&1
 # 京喜财富岛
-#5 0,6-23 * * * node /scripts/zero_jd_cfd.js >> /scripts/logs/zero_jd_cfd.log 2>&1
-#0 9 * * * node /scripts/ling_jd_cfd.js >> /scripts/logs/ling_jd_cfd.log 2>&1
-#5 8,13,19 * * * node /scripts/jd_cfd.js >> /scripts/logs/jd_cfd.log 2>&1
+5 0,6-23 * * * node /scripts/zero_jd_cfd.js >> /scripts/logs/zero_jd_cfd.log 2>&1
+30 * * * * node /scripts/zero_jd_cfd_loop.js >> /scripts/logs/zero_jd_cfd_loop.log 2>&1
 # 省钱大赢家之翻翻乐
 #20 0,6-23 * * * node /scripts/zero_jd_big_winner.js >> /scripts/logs/zero_jd_big_winner.log 2>&1
 # 店铺签到
@@ -202,10 +201,6 @@ PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
  0 0 * * node /scripts/zero_jd_shop.js >> /scripts/logs/zero_jd_shop.log 2>&1
 # 送豆得豆
 45 1,12 * * * node /scripts/zero_jd_sddd.js >> /scripts/logs/zero_jd_sddd.log 2>&1
-# 金像奖助力
-#0 9 * * * node /scripts/star_jd_goldenStaue.js >> /scripts/logs/star_jd_goldenStaue.log 2>&1
-# 金机奖投票
-#0 9 * * * node /scripts/ling_jd_golden_machine.js >> /scripts/logs/ling_jd_golden_machine.log 2>&1
 # 金榜创造营
 13 1,22 * * * node /scripts/zero_jd_gold_creator.js >> /scripts/logs/zero_jd_gold_creator.log 2>&1
 # 金融养猪

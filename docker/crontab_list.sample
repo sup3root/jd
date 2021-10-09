@@ -5,7 +5,7 @@ PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 # 收集助力码 
 30 * * * * sh +x /scripts/docker/auto_help.sh collect >> /scripts/logs/auto_help_collect.log 2>&1 
 # 配置更新 
-17 3 * * * bash /scripts/docker/default_task.sh >> /scripts/logs/default_task.log 2>&1
+17 3 * * * . /repo/addenv && bash /scripts/docker/default_task.sh >> /scripts/logs/default_task.log 2>&1
 ###################临时取消运行#############################
 ###################临时取消运行#############################
 # 京东资产变动通知
@@ -119,7 +119,7 @@ PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 # 京东种豆得豆
 1 7-21/2 * * * node /scripts/aaro_jd_plantBean.js >> /scripts/logs/aaro_jd_plantBean.log 2>&1
 # 京东保价
-0 2 * * * node /scripts/aaro_jd_price.js >> /scripts/logs/aaro_jd_price.log 2>&1
+41 0,12,23 * * * node /scripts/aaro_jd_price.js >> /scripts/logs/aaro_jd_price.log 2>&1
 # 京东全民开红包
 1 1,2,23 * * * node /scripts/aaro_jd_redPacket.js >> /scripts/logs/aaro_jd_redPacket.log 2>&1
 # 送豆得豆
@@ -552,6 +552,8 @@ PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 0 10 * * * node /scripts/ling_jd_yqyl.js >> /scripts/logs/ling_jd_yqyl.log 2>&1
 # 柠檬赚金币
 0 5 * * * node /scripts/ling_jd_zjb.js >> /scripts/logs/ling_jd_zjb.log 2>&1
+# 美妆周年庆
+0 9 * * * node /scripts/star_jd_beauty_twelfth.js >> /scripts/logs/star_jd_beauty_twelfth.log 2>&1
 # 东东世界
 0 9 * * * node /scripts/star_jd_ddworld.js >> /scripts/logs/star_jd_ddworld.log 2>&1
 # 热血心跳,狂解压
@@ -624,6 +626,8 @@ PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 1 6-22/3 * * * node /scripts/zero_jd_fcdyj.js >> /scripts/logs/zero_jd_fcdyj.log 2>&1
 # 东东农场
 5 6-18/6 * * * node /scripts/zero_jd_fruit.js >> /scripts/logs/zero_jd_fruit.log 2>&1
+# 芥么赚豪礼
+37 0,11 * * *  node /scripts/zero_jd_genz.js >> /scripts/logs/zero_jd_genz.log 2>&1
 # 获取互助码
 20 13 * * 6 node /scripts/zero_jd_get_share_code.js >> /scripts/logs/zero_jd_get_share_code.log 2>&1
 # 金榜创造营
@@ -684,8 +688,8 @@ PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 12 0-23/6 * * * node /scripts/zero_jd_pigPet.js >> /scripts/logs/zero_jd_pigPet.log 2>&1
 # 京东种豆得豆
 1 7-21/2 * * * node /scripts/zero_jd_plantBean.js >> /scripts/logs/zero_jd_plantBean.log 2>&1
-# 京东价格保护
-5 0 * * * node /scripts/zero_jd_price.js >> /scripts/logs/zero_jd_price.log 2>&1
+# 京东保价
+41 0,12,23 * * * node /scripts/zero_jd_price.js >> /scripts/logs/zero_jd_price.log 2>&1
 # QQ星系牧场
 45 0,6-23/2 * * * node /scripts/zero_jd_qqxing.js >> /scripts/logs/zero_jd_qqxing.log 2>&1
 # 京东排行榜
@@ -732,3 +736,5 @@ PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 25 0,6-23 * * * node /scripts/zero_jd_z_health_energy.js >> /scripts/logs/zero_jd_z_health_energy.log 2>&1
 # 柠檬赚金币
 0 7 * * * node /scripts/zero_jd_zjb.js >> /scripts/logs/zero_jd_zjb.log 2>&1
+# 芥么签到
+11 0,9 * * *  node /scripts/zero_jd_zsign.js >> /scripts/logs/zero_jd_zsign.log 2>&1
