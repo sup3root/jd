@@ -8,6 +8,8 @@ PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 17 3 * * * . /repo/addenv && bash /scripts/docker/default_task.sh >> /scripts/logs/default_task.log 2>&1
 ###################临时取消运行#############################
 ###################临时取消运行#############################
+# 攒金币 赢大礼
+22 0,8 * * * node /scripts/aaro_jd_GoldcoinToGift.js >> /scripts/logs/aaro_jd_GoldcoinToGift.log 2>&1
 # 京东资产变动通知
 2 9 * * * node /scripts/aaro_jd_bean_change.js >> /scripts/logs/aaro_jd_bean_change.log 2>&1
 # 领京豆额外奖励
@@ -31,11 +33,13 @@ PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 # 领券中心签到
 15 0 * * * node /scripts/aaro_jd_ccSign.js >> /scripts/logs/aaro_jd_ccSign.log 2>&1
 # 京喜财富岛
-5 * * * * node /scripts/aaro_jd_cfd.js >> /scripts/logs/aaro_jd_cfd.log 2>&1
+1 * * * * node /scripts/aaro_jd_cfd.js >> /scripts/logs/aaro_jd_cfd.log 2>&1
 # 京喜财富岛热气球
 30 * * * * node /scripts/aaro_jd_cfd_loop.js >> /scripts/logs/aaro_jd_cfd_loop.log 2>&1
 # 京喜财富岛合成月饼
 5 * * * * node /scripts/aaro_jd_cfd_mooncake.js >> /scripts/logs/aaro_jd_cfd_mooncake.log 2>&1
+# 城城领现金
+0 0-23/1 * * * node /scripts/aaro_jd_city.js >> /scripts/logs/aaro_jd_city.log 2>&1
 # 摇京豆
 5 0,23 * * * node /scripts/aaro_jd_club_lottery.js >> /scripts/logs/aaro_jd_club_lottery.log 2>&1
 # 内容鉴赏官
@@ -170,6 +174,8 @@ PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 2 0-23/4 * * * node /scripts/jd_cash.js >> /scripts/logs/jd_cash.log 2>&1
 # 京喜财富岛
 5 8,13,19 * * * node /scripts/jd_cfd.js >> /scripts/logs/jd_cfd.log 2>&1
+# 城城领现金
+0 0-23/1 * * * node /scripts/jd_city.js >> /scripts/logs/jd_city.log 2>&1
 # 摇京豆
 5 0,23 * * * node /scripts/jd_club_lottery.js >> /scripts/logs/jd_club_lottery.log 2>&1
 # crazyJoy任务
@@ -179,7 +185,7 @@ PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 # crazyJoy挂机
 10 1,12 * * * node /scripts/jd_crazy_joy_coin.js >> /scripts/logs/jd_crazy_joy_coin.log 2>&1
 # 天天提鹅
-10 * * * * node /scripts/jd_daily_egg.js >> /scripts/logs/jd_daily_egg.log 2>&1
+0 9 * * * node /scripts/jd_daily_egg.js >> /scripts/logs/jd_daily_egg.log 2>&1
 # 小鸽有礼-每日抽奖
 13 1,22,23 * * * node /scripts/jd_daily_lottery.js >> /scripts/logs/jd_daily_lottery.log 2>&1
 # 删除优惠券
@@ -263,7 +269,7 @@ PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 # 京东排行榜
 0 9 * * * node /scripts/jd_rankingList.js >> /scripts/logs/jd_rankingList.log 2>&1
 # 京东全民开红包
-1 1,2,23 * * * node /scripts/jd_redPacket.js >> /scripts/logs/jd_redPacket.log 2>&1
+1 0,2,18 * * * node /scripts/jd_redPacket.js >> /scripts/logs/jd_redPacket.log 2>&1
 # 送豆得豆
 0 9 * * * node /scripts/jd_sendBeans.js >> /scripts/logs/jd_sendBeans.log 2>&1
 # 闪购盲盒
@@ -277,7 +283,7 @@ PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 # ✈️天天加速
 8 0-23/3 * * * node /scripts/jd_speed.js >> /scripts/logs/jd_speed.log 2>&1
 # 京东极速版红包
-20 0,22 * * * node /scripts/jd_speed_redpocke.js >> /scripts/logs/jd_speed_redpocke.log 2>&1
+10 0,22 * * * node /scripts/jd_speed_redpocke.js >> /scripts/logs/jd_speed_redpocke.log 2>&1
 # 京东极速版
 0 7,19 * * * node /scripts/jd_speed_sign.js >> /scripts/logs/jd_speed_sign.log 2>&1
 # 明星小店
@@ -300,6 +306,8 @@ PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 15 6 * * * node /scripts/ling_jd_DrawEntrance.js >> /scripts/logs/ling_jd_DrawEntrance.log 2>&1
 # 东东电竞经理
  0 0-23/2 * * node /scripts/ling_jd_EsportsManager.js >> /scripts/logs/ling_jd_EsportsManager.log 2>&1
+# 攒金币 赢大礼
+22 0,8 * * * node /scripts/ling_jd_GoldcoinToGift.js >> /scripts/logs/ling_jd_GoldcoinToGift.log 2>&1
 # MM领京豆
 21 9 * * * node /scripts/ling_jd_MMdou.js >> /scripts/logs/ling_jd_MMdou.log 2>&1
 # 希捷品牌日瓜分百万京豆
@@ -314,6 +322,8 @@ PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 0 9 * * * node /scripts/ling_jd_bean_sign.js >> /scripts/logs/ling_jd_bean_sign.log 2>&1
 # 美丽研究院
 1 7,12,19 * * *  node /scripts/ling_jd_beauty.js >> /scripts/logs/ling_jd_beauty.log 2>&1
+# 美妆周年庆
+0 9 * * * node /scripts/ling_jd_beauty_twelfth.js >> /scripts/logs/ling_jd_beauty_twelfth.log 2>&1
 # 省钱大赢家之翻翻乐
 20 * * * * node /scripts/ling_jd_big_winner.js >> /scripts/logs/ling_jd_big_winner.log 2>&1
 # 东东超市兑换奖品
@@ -338,6 +348,8 @@ PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 0 9 * * * node /scripts/ling_jd_cfd.js >> /scripts/logs/ling_jd_cfd.log 2>&1
 # 京喜财富岛热气球挂机
 0 9 * * * node /scripts/ling_jd_cfd_loop.js >> /scripts/logs/ling_jd_cfd_loop.log 2>&1
+# 城城领现金
+0 0-23/1 * * * node /scripts/ling_jd_city.js >> /scripts/logs/ling_jd_city.log 2>&1
 # CK检测
 0 9 * * * node /scripts/ling_jd_ckCheck.js >> /scripts/logs/ling_jd_ckCheck.log 2>&1
 # 清空购物车
@@ -360,6 +372,8 @@ PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 0 9 * * * node /scripts/ling_jd_ddgame.js >> /scripts/logs/ling_jd_ddgame.log 2>&1
 # 东东玩家
 0 9 * * * node /scripts/ling_jd_ddwj.js >> /scripts/logs/ling_jd_ddwj.log 2>&1
+# 东东世界兑换
+0 8 * * *  node /scripts/ling_jd_ddworld_exchange.js >> /scripts/logs/ling_jd_ddworld_exchange.log 2>&1
 # 热血心跳,狂解压
 0 9 * * * node /scripts/ling_jd_decompression.js >> /scripts/logs/ling_jd_decompression.log 2>&1
 # 删除优惠券
@@ -380,12 +394,16 @@ PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 13 1,22 * * * node /scripts/ling_jd_gold_creator.js >> /scripts/logs/ling_jd_gold_creator.log 2>&1
 # 金机奖投票
 0 9 * * * node /scripts/ling_jd_golden_machine.js >> /scripts/logs/ling_jd_golden_machine.log 2>&1
+# 海尔京东超级品牌日
+25 13 * * *  node /scripts/ling_jd_haier.js >> /scripts/logs/ling_jd_haier.log 2>&1
 # 东东健康社区
 13 1,6,22 * * * node /scripts/ling_jd_health.js >> /scripts/logs/ling_jd_health.log 2>&1
 # 东东健康社区收集能量收集
 5-45/20 * * * * node /scripts/ling_jd_health_collect.js >> /scripts/logs/ling_jd_health_collect.log 2>&1
 # 京东众筹好物上新
 0 9 * * * node /scripts/ling_jd_hwsx.js >> /scripts/logs/ling_jd_hwsx.log 2>&1
+# 京东工业品
+13 5,16 * * *  node /scripts/ling_jd_industrial_task.js >> /scripts/logs/ling_jd_industrial_task.log 2>&1
 # 京东到家鲜豆任务
 0 9 * * * node /scripts/ling_jd_jddj_bean.js >> /scripts/logs/ling_jd_jddj_bean.log 2>&1
 # 京东到家果园水车收水滴任务
@@ -410,6 +428,8 @@ PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 0 9 * * * node /scripts/ling_jd_joy_help.js >> /scripts/logs/ling_jd_joy_help.log 2>&1
 # 宠汪汪积分兑换奖品
 59 7,15,23 * * * node /scripts/ling_jd_joy_reward.js >> /scripts/logs/ling_jd_joy_reward.log 2>&1
+# 宠汪汪积分兑换有就换版
+0 9 * * * node /scripts/ling_jd_joy_reward_Mod.js >> /scripts/logs/ling_jd_joy_reward_Mod.log 2>&1
 # 宠汪汪赛跑
 15 10 * * * node /scripts/ling_jd_joy_run.js >> /scripts/logs/ling_jd_joy_run.log 2>&1
 # 宠汪汪偷好友积分与狗粮
@@ -430,8 +450,8 @@ PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 0 9 * * * node /scripts/ling_jd_jxgc.js >> /scripts/logs/ling_jd_jxgc.log 2>&1
 # 京喜领88元红包
 4 2,10 * * * node /scripts/ling_jd_jxlhb.js >> /scripts/logs/ling_jd_jxlhb.log 2>&1
-# 京喜牧场
-20 0-23/3 * * * node /scripts/ling_jd_jxmc.js >> /scripts/logs/ling_jd_jxmc.log 2>&1
+# 惊喜牧场
+0 9 * * * node /scripts/ling_jd_jxmc.js >> /scripts/logs/ling_jd_jxmc.log 2>&1
 # 惊喜牧场助力
 10 0-23/3 * * * node /scripts/ling_jd_jxmczl.js >> /scripts/logs/ling_jd_jxmczl.log 2>&1
 # 京喜农场
@@ -456,6 +476,8 @@ PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 0 9 * * * node /scripts/ling_jd_lotteryMachine.js >> /scripts/logs/ling_jd_lotteryMachine.log 2>&1
 # 京东零食街
 0 9 * * * node /scripts/ling_jd_lsj.js >> /scripts/logs/ling_jd_lsj.log 2>&1
+# 幸运扭蛋
+0 9 * * * node /scripts/ling_jd_lucky_egg.js >> /scripts/logs/ling_jd_lucky_egg.log 2>&1
 # 幸运大转盘
 4 10 * * * node /scripts/ling_jd_market_lottery.js >> /scripts/logs/ling_jd_market_lottery.log 2>&1
 # 全民摸冰
@@ -464,6 +486,8 @@ PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 4 10 * * * node /scripts/ling_jd_mcxhd.js >> /scripts/logs/ling_jd_mcxhd.log 2>&1
 # 京东小魔方
 31 2,8 * * * node /scripts/ling_jd_mofang.js >> /scripts/logs/ling_jd_mofang.log 2>&1
+# 5魔方兑换
+0 0 * * * node /scripts/ling_jd_mofang_exchange.js >> /scripts/logs/ling_jd_mofang_exchange.log 2>&1
 # 5G超级盲盒
 0 0,1-23/3 * * * node /scripts/ling_jd_mohe.js >> /scripts/logs/ling_jd_mohe.log 2>&1
 # 京东摇钱树
@@ -546,6 +570,8 @@ PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 0 9 * * * node /scripts/ling_jd_wskeyOfck.js >> /scripts/logs/ling_jd_wskeyOfck.log 2>&1
 # 粉丝互动
 34 6,18 * * *  node /scripts/ling_jd_wxFans.js >> /scripts/logs/ling_jd_wxFans.log 2>&1
+# 一加
+10 14 * * *  node /scripts/ling_jd_yijia.js >> /scripts/logs/ling_jd_yijia.log 2>&1
 # 柠檬伊利养牛记
 0 12 * * * node /scripts/ling_jd_ylyn.js >> /scripts/logs/ling_jd_ylyn.log 2>&1
 # 柠檬邀请有礼
@@ -554,30 +580,46 @@ PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 0 5 * * * node /scripts/ling_jd_zjb.js >> /scripts/logs/ling_jd_zjb.log 2>&1
 # 美妆周年庆
 0 9 * * * node /scripts/star_jd_beauty_twelfth.js >> /scripts/logs/star_jd_beauty_twelfth.log 2>&1
+# 京东小家
+0 9 * * * node /scripts/star_jd_chinaJoy.js >> /scripts/logs/star_jd_chinaJoy.log 2>&1
+# 城城领现金
+0 9 * * * node /scripts/star_jd_city.js >> /scripts/logs/star_jd_city.log 2>&1
 # 东东世界
 0 9 * * * node /scripts/star_jd_ddworld.js >> /scripts/logs/star_jd_ddworld.log 2>&1
 # 热血心跳,狂解压
 0 9 * * * node /scripts/star_jd_decompression.js >> /scripts/logs/star_jd_decompression.log 2>&1
+# 戴尔
+0 9 * * * node /scripts/star_jd_dell.js >> /scripts/logs/star_jd_dell.log 2>&1
 # 粉丝互动
 34 5,18 * * *  node /scripts/star_jd_fan.js >> /scripts/logs/star_jd_fan.log 2>&1
 # 金像奖助力
 0 9 * * * node /scripts/star_jd_goldenStaue.js >> /scripts/logs/star_jd_goldenStaue.log 2>&1
+# 海尔京东超级品牌日
+10 15 * * *  node /scripts/star_jd_haier.js >> /scripts/logs/star_jd_haier.log 2>&1
 # 荣耀新品传送挑战
 0 9 * * * node /scripts/star_jd_honour.js >> /scripts/logs/star_jd_honour.log 2>&1
 # 惊喜牧场
 0 9 * * * node /scripts/star_jd_jxmc.js >> /scripts/logs/star_jd_jxmc.log 2>&1
+# 幸运扭蛋
+0 9 * * * node /scripts/star_jd_lucky_egg.js >> /scripts/logs/star_jd_lucky_egg.log 2>&1
 # 特务Z
 23 8,9 * * *  node /scripts/star_jd_productZ4Brand.js >> /scripts/logs/star_jd_productZ4Brand.log 2>&1
 # 明星小店
 12 19 19-30 9 *  node /scripts/star_jd_star_shop.js >> /scripts/logs/star_jd_star_shop.log 2>&1
 # 古蜀寻宝
 12 9,15 1-30 9,10 *  node /scripts/star_jd_xinxiangyin.js >> /scripts/logs/star_jd_xinxiangyin.log 2>&1
+# 一加
+10 14 * * *  node /scripts/star_jd_yijia.js >> /scripts/logs/star_jd_yijia.log 2>&1
+# 攒金币 赢大礼
+22 0,8 * * * node /scripts/zero_jd_GoldcoinToGift.js >> /scripts/logs/zero_jd_GoldcoinToGift.log 2>&1
 # 京东资产变动
 0 9 * * * node /scripts/zero_jd_bean_change.js >> /scripts/logs/zero_jd_bean_change.log 2>&1
 # 领京豆额外奖励
-10 7 * * * node /scripts/zero_jd_bean_home.js >> /scripts/logs/zero_jd_bean_home.log 2>&1
+23 1,12,22 * * * node /scripts/zero_jd_bean_home.js >> /scripts/logs/zero_jd_bean_home.log 2>&1
 # 美丽研究院
 1 7,12,19 * * *  node /scripts/zero_jd_beauty.js >> /scripts/logs/zero_jd_beauty.log 2>&1
+# 美妆周年庆
+0 9 * * * node /scripts/zero_jd_beauty_twelfth.js >> /scripts/logs/zero_jd_beauty_twelfth.log 2>&1
 # 省钱大赢家之翻翻乐
 20 0,6-23 * * * node /scripts/zero_jd_big_winner.js >> /scripts/logs/zero_jd_big_winner.log 2>&1
 # 东东超市兑换奖品
@@ -587,7 +629,7 @@ PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 # 京东汽车
 10 7 * * * node /scripts/zero_jd_car.js >> /scripts/logs/zero_jd_car.log 2>&1
 # 京东汽车兑换
-0 0 * * *  node /scripts/zero_jd_car_exchange.js >> /scripts/logs/zero_jd_car_exchange.log 2>&1
+59 23 * * *  node /scripts/zero_jd_car_exchange.js >> /scripts/logs/zero_jd_car_exchange.log 2>&1
 # 京东手机狂欢城
 0 0-18/6 * * * node /scripts/zero_jd_carnivalcity.js >> /scripts/logs/zero_jd_carnivalcity.log 2>&1
 # 签到领现金
@@ -595,15 +637,19 @@ PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 # 领券中心签到
 15 0 * * * node /scripts/zero_jd_ccSign.js >> /scripts/logs/zero_jd_ccSign.log 2>&1
 # 京喜财富岛
-5 0,6-23 * * * node /scripts/zero_jd_cfd.js >> /scripts/logs/zero_jd_cfd.log 2>&1
+1 0,6-23 * * * node /scripts/zero_jd_cfd.js >> /scripts/logs/zero_jd_cfd.log 2>&1
 # 京喜财富岛热气球
 30 * * * * node /scripts/zero_jd_cfd_loop.js >> /scripts/logs/zero_jd_cfd_loop.log 2>&1
 # 京喜财富岛合成月饼
 10 6,13,23 * * * node /scripts/zero_jd_cfd_mooncake.js >> /scripts/logs/zero_jd_cfd_mooncake.log 2>&1
+# 城城领现金
+0 0-23/5 * * * node /scripts/zero_jd_city.js >> /scripts/logs/zero_jd_city.log 2>&1
 # 摇京豆
 5 0,23 * * * node /scripts/zero_jd_club_lottery.js >> /scripts/logs/zero_jd_club_lottery.log 2>&1
 # 内容鉴赏官
 15 3,6 * * * node /scripts/zero_jd_connoisseur.js >> /scripts/logs/zero_jd_connoisseur.log 2>&1
+# 天天提鹅
+10 * * * * node /scripts/zero_jd_daily_egg.js >> /scripts/logs/zero_jd_daily_egg.log 2>&1
 # 东东游戏
 0 9 * * * node /scripts/zero_jd_ddgame.js >> /scripts/logs/zero_jd_ddgame.log 2>&1
 # 东东乐园
@@ -632,8 +678,12 @@ PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 20 13 * * 6 node /scripts/zero_jd_get_share_code.js >> /scripts/logs/zero_jd_get_share_code.log 2>&1
 # 金榜创造营
 13 1,22 * * * node /scripts/zero_jd_gold_creator.js >> /scripts/logs/zero_jd_gold_creator.log 2>&1
+# 海尔京东超级品牌日
+10 15 * * *  node /scripts/zero_jd_haier.js >> /scripts/logs/zero_jd_haier.log 2>&1
 # 东东健康社区
 13 0,6,22 * * * node /scripts/zero_jd_health.js >> /scripts/logs/zero_jd_health.log 2>&1
+# 京东工业品
+13 5,16 * * *  node /scripts/zero_jd_industrial_task.js >> /scripts/logs/zero_jd_industrial_task.log 2>&1
 # 东东工厂
 10 0,6-23 * * * node /scripts/zero_jd_jdfactory.js >> /scripts/logs/zero_jd_jdfactory.log 2>&1
 # 京东赚赚
@@ -661,7 +711,7 @@ PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 # 京小鸽吾悦寄
 0 9 * * * node /scripts/zero_jd_jxg.js >> /scripts/logs/zero_jd_jxg.log 2>&1
 # 京喜领88元红包
-4 10,16,21,16,21 * * * node /scripts/zero_jd_jxlhb.js >> /scripts/logs/zero_jd_jxlhb.log 2>&1
+4 2,10 * * * node /scripts/zero_jd_jxlhb.js >> /scripts/logs/zero_jd_jxlhb.log 2>&1
 # 惊喜牧场
 0 9 * * * node /scripts/zero_jd_jxmc.js >> /scripts/logs/zero_jd_jxmc.log 2>&1
 # 京东快递签到
@@ -672,6 +722,8 @@ PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 21 9 * * * node /scripts/zero_jd_ljd.js >> /scripts/logs/zero_jd_ljd.log 2>&1
 # 柠檬京东零食街
 0 9 * * * node /scripts/zero_jd_lsj.js >> /scripts/logs/zero_jd_lsj.log 2>&1
+# 幸运扭蛋
+0 9 * * * node /scripts/zero_jd_lucky_egg.js >> /scripts/logs/zero_jd_lucky_egg.log 2>&1
 # 5G超级盲盒
 0 0,1-23/3 * * * node /scripts/zero_jd_mohe.js >> /scripts/logs/zero_jd_mohe.log 2>&1
 # 京东摇钱树
@@ -732,6 +784,8 @@ PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 40 0,2 * * * node /scripts/zero_jd_wish.js >> /scripts/logs/zero_jd_wish.log 2>&1
 # 柠檬我是大老板农场
 5 0-23/6 * * * node /scripts/zero_jd_wsdlb.js >> /scripts/logs/zero_jd_wsdlb.log 2>&1
+# 一加
+10 14 * * *  node /scripts/zero_jd_yijia.js >> /scripts/logs/zero_jd_yijia.log 2>&1
 # 健康社区收取能量
 25 0,6-23 * * * node /scripts/zero_jd_z_health_energy.js >> /scripts/logs/zero_jd_z_health_energy.log 2>&1
 # 柠檬赚金币

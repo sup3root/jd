@@ -8,10 +8,10 @@ PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 17 3 * * * . /repo/addenv && bash /scripts/docker/default_task.sh >> /scripts/logs/default_task.log 2>&1
 ###################临时取消运行#############################
 # 宠汪汪积分兑换奖品
-#59 7,15,23 * * * node /scripts/aaro_jd_joy_reward.js >> /scripts/logs/aaro_jd_joy_reward.log 2>&1
+59 7,15,23 * * * node /scripts/aaro_jd_joy_reward.js >> /scripts/logs/aaro_jd_joy_reward.log 2>&1
 #59 7,15,23 * * * node /scripts/zero_jd_joy_reward.js >> /scripts/logs/zero_jd_joy_reward.log 2>&1
 #59 7,15,23 * * * node /scripts/jd_joy_reward_new.js >> /scripts/logs/jd_joy_reward_new.log 2>&1
-#59 7,15,23 * * * node /scripts/ling_jd_joy_reward.js >> /scripts/logs/ling_jd_joy_reward.log 2>&1
+59 7,15,23 * * * node /scripts/ling_jd_joy_reward.js >> /scripts/logs/ling_jd_joy_reward.log 2>&1
 # 京喜财富岛
 5 0,6-23 * * * node /scripts/zero_jd_cfd.js >> /scripts/logs/zero_jd_cfd.log 2>&1
 30 * * * * node /scripts/zero_jd_cfd_loop.js >> /scripts/logs/zero_jd_cfd_loop.log 2>&1
@@ -227,3 +227,17 @@ PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 37 0,11 * * *  node /scripts/zero_jd_genz.js >> /scripts/logs/zero_jd_genz.log 2>&1
 # 芥么签到
 11 0,9 * * *  node /scripts/zero_jd_zsign.js >> /scripts/logs/zero_jd_zsign.log 2>&1
+# 海尔京东超级品牌日
+10 15 9-15 10 *  node /scripts/star_jd_haier.js >> /scripts/logs/star_jd_haier.log 2>&1
+# 一加
+10 14 * 10,11 *  node /scripts/star_jd_yijia.js >> /scripts/logs/star_jd_yijia.log 2>&1
+# 京东工业品
+13 5,16 * 10,11 *  node /scripts/zero_jd_industrial_task.js >> /scripts/logs/zero_jd_industrial_task.log 2>&1
+# 幸运扭蛋
+0 9 * 10,11 * node /scripts/zero_jd_lucky_egg.js >> /scripts/logs/zero_jd_lucky_egg.log 2>&1
+# 攒金币 赢大礼
+22 0,8 15-28 10 * node /scripts/zero_jd_GoldcoinToGift.js >> /scripts/logs/zero_jd_GoldcoinToGift.log 2>&1
+# 宠汪汪积分兑换有就换版
+59 7,15,23 * * * node /scripts/ling_jd_joy_reward_Mod.js >> /scripts/logs/ling_jd_joy_reward_Mod.log 2>&1
+# 城城领现金
+0 0-23/5,22 * 10 * node /scripts/gua_city.js >> /scripts/logs/gua_city.log 2>&1
