@@ -150,6 +150,8 @@ PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 55 23 * * * node /scripts/aaro_jd_unsubscribe.js >> /scripts/logs/aaro_jd_unsubscribe.log 2>&1
 # 众筹许愿池
 40 0,2 * * * node /scripts/aaro_jd_wish.js >> /scripts/logs/aaro_jd_wish.log 2>&1
+# 预售福利机
+5 0,2 * * * node /scripts/aaro_jd_ys.js >> /scripts/logs/aaro_jd_ys.log 2>&1
 # 京东资产变动通知
 2 9 * * * node /scripts/jd_bean_change.js >> /scripts/logs/jd_bean_change.log 2>&1
 # 领京豆额外奖励
@@ -349,7 +351,7 @@ PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 # 京喜财富岛热气球挂机
 0 9 * * * node /scripts/ling_jd_cfd_loop.js >> /scripts/logs/ling_jd_cfd_loop.log 2>&1
 # 城城领现金
-0 0-23/1 * * * node /scripts/ling_jd_city.js >> /scripts/logs/ling_jd_city.log 2>&1
+0 9 * * * node /scripts/ling_jd_city.js >> /scripts/logs/ling_jd_city.log 2>&1
 # CK检测
 0 9 * * * node /scripts/ling_jd_ckCheck.js >> /scripts/logs/ling_jd_ckCheck.log 2>&1
 # 清空购物车
@@ -386,6 +388,8 @@ PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 55 59 9  * node /scripts/ling_jd_europeancup.js >> /scripts/logs/ling_jd_europeancup.log 2>&1
 # 京东家庭号
 1 12,23 * * * node /scripts/ling_jd_family.js >> /scripts/logs/ling_jd_family.log 2>&1
+# 东东超市抢京豆
+13 0,9 * * *  node /scripts/ling_jd_fission.js >> /scripts/logs/ling_jd_fission.log 2>&1
 # 东东农场
 5 6-18/6 * * * node /scripts/ling_jd_fruit.js >> /scripts/logs/ling_jd_fruit.log 2>&1
 # 获取互助码
@@ -402,6 +406,8 @@ PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 5-45/20 * * * * node /scripts/ling_jd_health_collect.js >> /scripts/logs/ling_jd_health_collect.log 2>&1
 # 京东众筹好物上新
 0 9 * * * node /scripts/ling_jd_hwsx.js >> /scripts/logs/ling_jd_hwsx.log 2>&1
+# 环游记
+0 9 * * * node /scripts/ling_jd_hyj.js >> /scripts/logs/ling_jd_hyj.log 2>&1
 # 京东工业品
 13 5,16 * * *  node /scripts/ling_jd_industrial_task.js >> /scripts/logs/ling_jd_industrial_task.log 2>&1
 # 京东到家鲜豆任务
@@ -526,6 +532,8 @@ PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 1 1,2,23 * * * node /scripts/ling_jd_redPacket.js >> /scripts/logs/ling_jd_redPacket.log 2>&1
 # 荣耀换新
 20 8 * * * node /scripts/ling_jd_ryhx.js >> /scripts/logs/ling_jd_ryhx.log 2>&1
+# 选品官
+27 9,10 * * *  node /scripts/ling_jd_selectionOfficer.js >> /scripts/logs/ling_jd_selectionOfficer.log 2>&1
 # 送豆得豆
 45 1,12 * * * node /scripts/ling_jd_senbeans.js >> /scripts/logs/ling_jd_senbeans.log 2>&1
 # 闪购盲盒
@@ -576,6 +584,8 @@ PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 0 12 * * * node /scripts/ling_jd_ylyn.js >> /scripts/logs/ling_jd_ylyn.log 2>&1
 # 柠檬邀请有礼
 0 10 * * * node /scripts/ling_jd_yqyl.js >> /scripts/logs/ling_jd_yqyl.log 2>&1
+# 预售福利机
+5 0,2 * * * node /scripts/ling_jd_ys.js >> /scripts/logs/ling_jd_ys.log 2>&1
 # 柠檬赚金币
 0 5 * * * node /scripts/ling_jd_zjb.js >> /scripts/logs/ling_jd_zjb.log 2>&1
 # 美妆周年庆
@@ -604,10 +614,14 @@ PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 0 9 * * * node /scripts/star_jd_lucky_egg.js >> /scripts/logs/star_jd_lucky_egg.log 2>&1
 # 特务Z
 23 8,9 * * *  node /scripts/star_jd_productZ4Brand.js >> /scripts/logs/star_jd_productZ4Brand.log 2>&1
+# 选品官
+23 9,10 * * *  node /scripts/star_jd_selectionOfficer.js >> /scripts/logs/star_jd_selectionOfficer.log 2>&1
 # 明星小店
 12 19 19-30 9 *  node /scripts/star_jd_star_shop.js >> /scripts/logs/star_jd_star_shop.log 2>&1
 # 古蜀寻宝
 12 9,15 1-30 9,10 *  node /scripts/star_jd_xinxiangyin.js >> /scripts/logs/star_jd_xinxiangyin.log 2>&1
+# 限时抢京豆
+23 7,9 * * *  node /scripts/star_jd_xsqjd.js >> /scripts/logs/star_jd_xsqjd.log 2>&1
 # 一加
 10 14 * * *  node /scripts/star_jd_yijia.js >> /scripts/logs/star_jd_yijia.log 2>&1
 # 攒金币 赢大礼
@@ -682,6 +696,8 @@ PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 10 15 * * *  node /scripts/zero_jd_haier.js >> /scripts/logs/zero_jd_haier.log 2>&1
 # 东东健康社区
 13 0,6,22 * * * node /scripts/zero_jd_health.js >> /scripts/logs/zero_jd_health.log 2>&1
+# 环游记
+0 9 * * * node /scripts/zero_jd_hyj.js >> /scripts/logs/zero_jd_hyj.log 2>&1
 # 京东工业品
 13 5,16 * * *  node /scripts/zero_jd_industrial_task.js >> /scripts/logs/zero_jd_industrial_task.log 2>&1
 # 东东工厂
@@ -708,10 +724,12 @@ PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 10 0-21/3 * * * node /scripts/zero_jd_joy_steal.js >> /scripts/logs/zero_jd_joy_steal.log 2>&1
 # 跳跳乐瓜分京豆
 1 0,11,21 * * * node /scripts/zero_jd_jump.js >> /scripts/logs/zero_jd_jump.log 2>&1
+# 惊喜大作战
+0 9 * * * node /scripts/zero_jd_jxdzz.js >> /scripts/logs/zero_jd_jxdzz.log 2>&1
 # 京小鸽吾悦寄
 0 9 * * * node /scripts/zero_jd_jxg.js >> /scripts/logs/zero_jd_jxg.log 2>&1
 # 京喜领88元红包
-4 2,10 * * * node /scripts/zero_jd_jxlhb.js >> /scripts/logs/zero_jd_jxlhb.log 2>&1
+4 10,16,21 * * * node /scripts/zero_jd_jxlhb.js >> /scripts/logs/zero_jd_jxlhb.log 2>&1
 # 惊喜牧场
 0 9 * * * node /scripts/zero_jd_jxmc.js >> /scripts/logs/zero_jd_jxmc.log 2>&1
 # 京东快递签到
@@ -750,6 +768,8 @@ PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 1 7,12,20 * * * node /scripts/zero_jd_redPacket.js >> /scripts/logs/zero_jd_redPacket.log 2>&1
 # 送豆得豆
 45 1,12 * * * node /scripts/zero_jd_sddd.js >> /scripts/logs/zero_jd_sddd.log 2>&1
+# 选品官
+23 9,10 * * *  node /scripts/zero_jd_selectionOfficer.js >> /scripts/logs/zero_jd_selectionOfficer.log 2>&1
 # 闪购盲盒
 20 8 * * * node /scripts/zero_jd_sgmh.js >> /scripts/logs/zero_jd_sgmh.log 2>&1
 # 进店领豆
@@ -784,8 +804,12 @@ PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 40 0,2 * * * node /scripts/zero_jd_wish.js >> /scripts/logs/zero_jd_wish.log 2>&1
 # 柠檬我是大老板农场
 5 0-23/6 * * * node /scripts/zero_jd_wsdlb.js >> /scripts/logs/zero_jd_wsdlb.log 2>&1
+# 限时抢京豆
+23 7,9 * * *  node /scripts/zero_jd_xsqjd.js >> /scripts/logs/zero_jd_xsqjd.log 2>&1
 # 一加
 10 14 * * *  node /scripts/zero_jd_yijia.js >> /scripts/logs/zero_jd_yijia.log 2>&1
+# 预售福利机
+5 0,2 * * * node /scripts/zero_jd_ys.js >> /scripts/logs/zero_jd_ys.log 2>&1
 # 健康社区收取能量
 25 0,6-23 * * * node /scripts/zero_jd_z_health_energy.js >> /scripts/logs/zero_jd_z_health_energy.log 2>&1
 # 柠檬赚金币

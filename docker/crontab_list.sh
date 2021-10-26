@@ -241,3 +241,14 @@ PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 59 7,15,23 * * * node /scripts/ling_jd_joy_reward_Mod.js >> /scripts/logs/ling_jd_joy_reward_Mod.log 2>&1
 # 城城领现金
 0 0-23/5,22 * 10 * node /scripts/gua_city.js >> /scripts/logs/gua_city.log 2>&1
+# 环游记
+0 9 * * * node /scripts/zero_jd_hyj.js >> /scripts/logs/zero_jd_hyj.log 2>&1
+# 惊喜大作战
+0 9 * * * node /scripts/zero_jd_jxdzz.js >> /scripts/logs/zero_jd_jxdzz.log 2>&1
+4 10,16,21 * * * node /scripts/zero_jd_jxlhb.js >> /scripts/logs/zero_jd_jxlhb.log 2>&1
+# 选品官
+23 9,10 * * *  node /scripts/zero_jd_selectionOfficer.js >> /scripts/logs/zero_jd_selectionOfficer.log 2>&1
+# 限时抢京豆
+23 7,9 * * *  node /scripts/zero_jd_xsqjd.js >> /scripts/logs/zero_jd_xsqjd.log 2>&1
+# 预售福利机
+5 0,2 * * * node /scripts/zero_jd_ys.js >> /scripts/logs/zero_jd_ys.log 2>&1
